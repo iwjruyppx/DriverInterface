@@ -54,7 +54,7 @@ typedef struct{
     void (*uSleep)(uint32_t);
     int64_t (*GetTimeNs)(void);
     void (*Error)(int, void *);
-    void (*DataCb)(float *, void *);
+    void (*DataCb)(pDriverConfig, float *, void *);
 } DriverAPI, *pDriverAPI;
 
 typedef struct DriverH_t{

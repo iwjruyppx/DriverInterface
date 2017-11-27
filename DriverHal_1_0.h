@@ -44,8 +44,6 @@ typedef struct{
     int type;
     uint16_t slaveAddr;
     uint8_t privateSetting[4];		//private_setting[2] = INTERRUPT_SETTING
-    uint8_t axis;
-    float hwbias[3];
 } DriverConfig, *pDriverConfig;
 
 typedef struct{

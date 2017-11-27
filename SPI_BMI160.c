@@ -438,7 +438,8 @@ static int DriverBmi160AccGetData(pDriverHandle_t pHandle, void *data){
         senData[2] = (float)datas16_raw[2] * BMI160_ACC_CONVERT_4G;
         senDataCb(pHandle, senData, NULL);
         accDataVerify(pHandle, datas16_raw);
-        memcpy(data, senData, sizeof(float)*3);
+        if(data != NULL)
+            memcpy(data, senData, sizeof(float)*3);
         return CWM_NON;
     }
     return CWM_ERROR_SPI;
@@ -724,8 +725,15 @@ static int DriverBmi160GyroGetData(pDriverHandle_t pHandle, void *data)
     int i=0;	
     int err = -1;
     int count = 0;
-    if(BMI160.gyroMode == MODE_BYPASS){	//MODE: BYPSS or STREAM
-        if(!Read(pHandle, BMI160_GYR_DATA_8_GYR_XL_REG,tmpreg,6) ){
+    
+    if(BMI160.gyroMode == MODE_GYRO_FIFO_STREAM){
+        count = GyroGetStatus(pHandle, NULL);
+        if(count <= 0){
+            return CWM_ERROR_NO_DATA;
+        }
+    }
+    do {
+        if(!Read(pHandle, BMI160_GYR_DATA_8_GYR_XL_REG,tmpreg,6)){
             for(i=0; i<3; i++){
                 datas16_raw[i]=(int16_t)(((uint16_t)tmpreg[2*i+1] << 8) + tmpreg[2*i]);
             } 
@@ -733,28 +741,11 @@ static int DriverBmi160GyroGetData(pDriverHandle_t pHandle, void *data)
             senData[1] = (float)datas16_raw[1] * BMI160_GYRO_CONVERT;
             senData[2] = (float)datas16_raw[2] * BMI160_GYRO_CONVERT;
             senDataCb(pHandle, senData, NULL);
-
+            if(data != NULL)
+                memcpy(data, senData, sizeof(float)*3);
             err = NO_ERROR;
         }
-    }else if(BMI160.gyroMode == MODE_GYRO_FIFO_STREAM){
-        count = GyroGetStatus(pHandle, NULL);
-        if(count <= 0){
-            return CWM_ERROR_NO_DATA;
-        }
-        while(count> 0){
-            if(!Read(pHandle, BMI160_GYR_FIFO_DATA_REG,tmpreg,6) ){
-                for(i=0; i<3; i++){
-                    datas16_raw[i]=(int16_t)(((uint16_t)tmpreg[2*i+1] << 8) + tmpreg[2*i]);
-                } 
-                senData[0] = (float)datas16_raw[0] * BMI160_GYRO_CONVERT;
-                senData[1] = (float)datas16_raw[1] * BMI160_GYRO_CONVERT;
-                senData[2] = (float)datas16_raw[2] * BMI160_GYRO_CONVERT;
-                senDataCb(pHandle, senData, NULL);
-                err = NO_ERROR;
-            }
-            count --;
-        }
-    }
+    }while(--count <= 0);
     return err;
 }
 

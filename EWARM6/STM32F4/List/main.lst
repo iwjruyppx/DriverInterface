@@ -1,0 +1,155 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.80.4.12462/W32 for ARM       23/Nov/2017  19:15:40
+# Copyright 1999-2017 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  C:\Users\Paul\Desktop\simulation\DriverInterface\main.c
+#    Command line =  
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\main.c -D
+#        USE_STDPERIPH_DRIVER -D VECT_TAB_FLASH -D USE_STM32F4_EVB -D STM32F4XX
+#        -D STM32F401X -D AKM_MAGNETOMETER_AK09911 -D AKSC_VERSION_DEVICE=9911
+#        -D AKL_SKIP_HW_CHECK -D DEBUG -D AKM_DISABLE_DOEPLUS -D
+#        AKM_CUSTOM_CONTINUOUS_MEASURE -D __DOEAG_MODE_EN -D ACC_SENSOR_DISABLE
+#        -D AKM_ACCELEROMETER_DUMMY -D AKM_ENABLE_PDC -lC
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\STM32F4\List
+#        -lA
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\STM32F4\List
+#        --diag_suppress Pa082,pe191 -o
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\STM32F4\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench 7.5\arm\INC\c\DLib_Config_Full.h"
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Libraries\STM32_Common\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Libraries\STM32F4xx_HAL_Driver\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Libraries\CMSIS\Device\STM32F4xx\Include\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\FreeRTOS\FreeRTOS821\Source\include\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\FreeRTOS\FreeRTOS821\Source\portable\IAR\ARM_CM4F\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Libraries\STM32_CPAL_Driver\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Libraries\STM32_CPAL_Driver\devices\stm32f4xx\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\Algorithm\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\Driver\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\AKM8963\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\AKM09911\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\AKM09911AG\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\AKM09911AG\AKM_HAL\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\AKM09911AG\AKM_Library\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\AKM09911AG\AKM_Library\libag\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\AKM09911AG\AKM_Library\libSmartCompass\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\AKM09911AG\AKM_Sensors\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\MMC3524xPJ\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\ST480M\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\Yamaha\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\DriverLibrary\YamahaMini\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\Manager\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\System\Utils\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Release\Driver\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Release\Manager\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Release\Platform\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Release\RtosTask\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Release\System\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\Release\SystemConfig\inc\
+#        -I
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\..\..\Source\inc\
+#        -I C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\..\..\..\
+#        -I C:\work\Develop\Source\Manager\ -I C:\work\Develop\Source\Common\
+#        -I C:\work\Develop\Source\Platform_Dependent\ -I
+#        C:\work\Develop\Source\Android\ -I C:\work\Develop\Source\TimeSync\ -I
+#        C:\work\Develop\Source\Protocol\ -On --vla --use_c++_inline -I
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    Locale       =  Chinese (Traditional)_Taiwan.950
+#    List file    =  
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\STM32F4\List\main.lst
+#    Object file  =  
+#        C:\Users\Paul\Desktop\simulation\DriverInterface\EWARM6\STM32F4\Obj\main.o
+#
+###############################################################################
+
+C:\Users\Paul\Desktop\simulation\DriverInterface\main.c
+      1          #include "main.h"
+      2          
+
+   \                                 In section .text, align 4, keep-with-next
+      3           int main( void )
+      4          {
+   \                     main: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      5              while(1)
+      6              {
+      7                  printf("test\n");
+   \                     ??main_0: (+1)
+   \   00000002   0x4802             LDR.N    R0,??main_1
+   \   00000004   0x.... 0x....      BL       printf
+   \   00000008   0xE7FB             B.N      ??main_0
+   \   0000000A   0xBF00             Nop      
+   \                     ??main_1:
+   \   0000000C   0x........         DC32     ?_0
+      8              }
+      9          }
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \   00000000   0x74 0x65          DC8 "test\012"
+   \              0x73 0x74    
+   \              0x0A 0x00    
+   \   00000006   0x00 0x00          DC8 0, 0
+     10          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   main
+         8   -> printf
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       8  ?_0
+      16  main
+
+ 
+  8 bytes in section .rodata
+ 16 bytes in section .text
+ 
+ 16 bytes of CODE  memory
+  8 bytes of CONST memory
+
+Errors: none
+Warnings: none

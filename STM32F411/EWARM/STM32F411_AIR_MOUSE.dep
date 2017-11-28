@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>1496140916</fileChecksum>
+  <fileChecksum>1592130224</fileChecksum>
   <configuration>
     <name>STM32F411_AIR_MOUSE</name>
     <outputs>
@@ -29,71 +29,23 @@
       <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c</file>
       <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c</file>
       <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c</file>
-      <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h</file>
-      <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cm4.h</file>
-      <file>$PROJ_DIR$\..\Src\cwm\algo\cwm_air_mouse.h</file>
-      <file>$PROJ_DIR$\..\Src\cwm\cwmAlgorithmHal.h</file>
-      <file>$PROJ_DIR$\..\Src\cwm\algo\cwm_fusion_ExMem.h</file>
-      <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cmFunc.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h</file>
-      <file>$PROJ_DIR$\..\Src\CWM_TASK.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h</file>
-      <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cmInstr.h</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmApp.o</file>
-      <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cmSimd.h</file>
-      <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h</file>
-      <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash_ramfunc.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash_ex.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmTaskSen.o</file>
-      <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmDriverHal.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\CWM_TASK.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmAlgorithmHal.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmGpioConfig.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_dma.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\freertos.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\main.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_msp.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_cortex.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_dma_ex.o</file>
-      <file>$PROJ_DIR$\..\Src\cwm\cwmGpioConfig.h</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\system_stm32f4xx.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_it.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\list.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_pwr.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmAlgorithmHal.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cmsis_os.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_gpio.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_rcc.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_pwr_ex.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\croutine.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_rcc_ex.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_spi.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\croutine.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_tim.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_tim_ex.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\heap_4.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\event_groups.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\heap_4.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\portasm.o</file>
       <file>$PROJ_DIR$\..\..\DriverHal_1_0_Config.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
       <file>$TOOLKIT_DIR$\inc\c\errno.h</file>
       <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
       <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
       <file>$PROJ_DIR$\..\..\CWM_ERROR_CODE.h</file>
       <file>$PROJ_DIR$\..\..\DriverHal_1_0.h</file>
       <file>$PROJ_DIR$\..\..\SPI_BMI160_DEF.h</file>
@@ -102,58 +54,58 @@
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\DriverHal_1_0.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\SPI_BMI160.pbi</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\DriverHal_1_0.pbi</file>
-      <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
       <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
       <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\event_groups.pbi</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\heap_4.pbi</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\portmacro.h</file>
       <file>$PROJ_DIR$\..\Src\cwm\customIntf\customIntf.h</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\list.pbi</file>
-      <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\portmacro.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\STM32F411_AIR_MOUSE.pbd</file>
       <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\queue.pbi</file>
       <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_tim_ex.pbi</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\tasks.pbi</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\port.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_tim_ex.pbi</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\croutine.pbi</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
       <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
       <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$PROJ_DIR$\..\Src\cwm\cwmApp.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\..\Src\cwm\cwmApp.h</file>
+      <file>$PROJ_DIR$\..\Src\cwm\customIntf\customIntf.c</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\timers.pbi</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h</file>
       <file>$PROJ_DIR$\..\Src\cwm\cwmAlgorithmHal.c</file>
       <file>$PROJ_DIR$\..\Src\cwm\osTask\cwmTaskSen.c</file>
       <file>$PROJ_DIR$\..\Src\cwm\cwmApp.c</file>
-      <file>$PROJ_DIR$\..\Src\cwm\customIntf\customIntf.c</file>
       <file>$PROJ_DIR$\..\Src\cwm\osTask\cwmTaskCmd.c</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Exe\STM32F411_AIR_MOUSE.out</file>
       <file>$PROJ_DIR$\..\Src\cwm\driver\DriverBMI160_SPI.c</file>
       <file>$PROJ_DIR$\..\Src\cwm\cwmGpioConfig.c</file>
       <file>$PROJ_DIR$\..\Inc\FreeRTOSConfig.h</file>
       <file>$PROJ_DIR$\..\Src\cwm\cwmDriverHal.c</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Exe\STM32F411_AIR_MOUSE.out</file>
       <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmTaskCmd.o</file>
       <file>$PROJ_DIR$\..\Src\cwm\cwmProjectConfig.h</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\StackMacros.h</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\croutine.h</file>
       <file>$PROJ_DIR$\..\Inc\stm32f4xx_it.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\DriverBMI160_SPI.o</file>
       <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\customIntf.o</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_pwr_ex.pbi</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h</file>
@@ -162,6 +114,54 @@
       <file>$PROJ_DIR$\..\Inc\main.h</file>
       <file>$PROJ_DIR$\..\Src\cwm\osTask\task_def.h</file>
       <file>$PROJ_DIR$\..\Src\cwm\osTask\cwmTaskCmd.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\tasks.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\startup_stm32f411xe.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash_ramfunc.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\timers.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\DriverBMI160_SPI.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\customIntf.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\port.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmTaskCmd.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\queue.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash_ex.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\CWM_TASK.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmTaskSen.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmDriverHal.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmGpioConfig.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmApp.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_cortex.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_dma_ex.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_msp.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_it.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\system_stm32f4xx.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\freertos.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_rcc_ex.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_pwr.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_rcc.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_spi.pbi</file>
+      <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_gpio.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_dma.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\..\Inc\stm32f4xx_hal_conf.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cmsis_os.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_tim.pbi</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h</file>
+      <file>$PROJ_DIR$\..\Src\cwm\algo\cwm_algo_callback.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h</file>
+      <file>$PROJ_DIR$\..\Src\cwm\driver\DriverBMI160_SPI.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\List\STM32F411_AIR_MOUSE.map</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Lib\IAR\iar_cortexM4lf_math.a</file>
+      <file>$PROJ_DIR$\stm32f411xe_flash.icf</file>
+      <file>$PROJ_DIR$\..\Src\cwm\cwmDriverHal.h</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
       <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\croutine.c</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c</file>
@@ -169,80 +169,88 @@
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\portasm.s</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\list.c</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\tasks.o</file>
+      <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\port.c</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\queue.c</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash_ramfunc.pbi</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\tasks.c</file>
       <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\timers.c</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\timers.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\startup_stm32f411xe.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\customIntf.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\DriverBMI160_SPI.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\port.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmTaskCmd.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\queue.o</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_pwr_ex.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmTaskSen.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\CWM_TASK.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmDriverHal.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmGpioConfig.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmApp.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash_ex.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_cortex.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_msp.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_it.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_dma_ex.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\system_stm32f4xx.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\freertos.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_rcc.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_spi.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_rcc_ex.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_gpio.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_dma.pbi</file>
-      <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_pwr.pbi</file>
-      <file>$PROJ_DIR$\..\Inc\stm32f4xx_hal_conf.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cmsis_os.pbi</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_tim.pbi</file>
-      <file>$PROJ_DIR$\..\Src\cwm\algo\cwm_algo_callback.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h</file>
-      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h</file>
-      <file>$PROJ_DIR$\..\Src\cwm\driver\DriverBMI160_SPI.h</file>
-      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\List\STM32F411_AIR_MOUSE.map</file>
-      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-      <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h</file>
-      <file>$TOOLKIT_DIR$\CMSIS\Lib\IAR\iar_cortexM4lf_math.a</file>
-      <file>$PROJ_DIR$\..\Src\cwm\cwmDriverHal.h</file>
-      <file>$PROJ_DIR$\stm32f411xe_flash.icf</file>
-      <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
-      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cm4.h</file>
+      <file>$PROJ_DIR$\..\Src\cwm\algo\cwm_fusion_ExMem.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h</file>
+      <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\Src\cwm\cwmAlgorithmHal.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h</file>
+      <file>$PROJ_DIR$\..\Src\cwm\algo\cwm_air_mouse.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h</file>
+      <file>$PROJ_DIR$\..\Src\CWM_TASK.h</file>
+      <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h</file>
+      <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmApp.o</file>
+      <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cmSimd.h</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h</file>
+      <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash_ramfunc.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash_ex.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmTaskSen.o</file>
+      <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmDriverHal.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\CWM_TASK.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_flash.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmAlgorithmHal.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmGpioConfig.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_dma.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\freertos.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\main.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_msp.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_cortex.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\system_stm32f4xx.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_dma_ex.o</file>
+      <file>$PROJ_DIR$\..\Src\cwm\cwmGpioConfig.h</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_it.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\list.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\stm32f4xx_hal_pwr.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cwmAlgorithmHal.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\cmsis_os.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\CWM_TASK1.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\CWM_TASK1.o</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\CWM_TASK2.pbi</file>
+      <file>$PROJ_DIR$\STM32F411_AIR_MOUSE\Obj\CWM_TASK2.o</file>
+      <file>$PROJ_DIR$\..\Src\CWM_TASK2.h</file>
+      <file>$PROJ_DIR$\..\Src\CWM_TASK2.c</file>
+      <file>$PROJ_DIR$\..\Src\CWM_TASK1.c</file>
+      <file>$PROJ_DIR$\..\Src\CWM_TASK1.h</file>
     </outputs>
     <file>
       <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 202</file>
+          <file> 143</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 78</file>
+          <file> 30</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 205 111 31 206 33 34 109 204 120 24 37 32 30 197 25 116 121 51 199 153 35 36 44 45 29 200 123 136 106 40 46 41 43 115 102 119 147 38</file>
+          <file> 144 62 171 146 177 178 60 142 71 166 181 174 176 136 169 68 72 196 140 105 179 180 185 190 172 139 73 87 57 183 189 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -251,7 +259,7 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 135 208</file>
+          <file> 82 148</file>
         </tool>
       </outputs>
     </file>
@@ -260,21 +268,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 95</file>
+          <file> 47</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 93</file>
+          <file> 45</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 120 119 83 200 98 121 54 116 109 144 106 89 111 85 84 87 123 107 115 102 86 88 91</file>
+          <file> 71 67 35 139 49 72 193 68 60 89 57 41 62 36 24 38 73 58 66 50 37 40 43</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 111 116 120 200 115 102 121 123 119 106 109 85 98 107 84 54 86 144 83 88 89 91</file>
+          <file> 62 68 71 139 66 50 72 73 67 57 60 36 49 58 24 193 37 89 35 40 41 43</file>
         </tool>
       </inputs>
     </file>
@@ -283,7 +291,7 @@
       <outputs>
         <tool>
           <name>AARM</name>
-          <file> 170</file>
+          <file> 109</file>
         </tool>
       </outputs>
     </file>
@@ -292,21 +300,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 94</file>
+          <file> 46</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 92</file>
+          <file> 44</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 120 119 83 121 54 98 106 88 109 144 91 200 123 116 107 111 85 84 87 90 115 102 86 89</file>
+          <file> 71 67 35 72 193 49 57 40 60 89 43 139 73 68 58 62 36 24 38 42 66 50 37 41</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 111 116 120 200 115 102 121 123 119 106 109 85 98 107 84 54 86 144 83 88 89 91 90</file>
+          <file> 62 68 71 139 66 50 72 73 67 57 60 36 49 58 24 193 37 89 35 40 41 43 42</file>
         </tool>
       </inputs>
     </file>
@@ -315,21 +323,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 178</file>
+          <file> 118</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 53</file>
+          <file> 198</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 137 116 109 205 119 115 120 107 153 206 111 136 83 102 197 25 29 204 147 210 150 98 39 148 89 106 200 121 123 199 24 31 37 34 32 33 30 35 36 44 45 41 43 38 149 140 152 40 51 46 101 23 50 97 133 125 105 118 88 91</file>
+          <file> 88 68 60 144 67 66 71 58 105 146 62 87 35 50 136 169 172 142 96 150 102 49 184 100 41 57 139 72 73 140 166 171 181 178 174 177 176 179 180 185 190 186 188 182 101 92 104 183 196 189 53 163 194 48 85 77 54 70 40 43</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 111 116 120 200 115 102 121 123 119 106 98 107 153 39 205 199 24 206 197 44 25 109 41 204 136 29 43 45 36 35 31 40 37 147 34 32 38 51 33 46 30 148 101 97 133 140 125 152 105 118 137 150 23 149 50 210 83 88 89 91</file>
+          <file> 62 68 71 139 66 50 72 73 67 57 49 58 105 184 144 140 166 146 136 185 169 60 186 142 87 172 188 190 180 179 171 183 181 96 178 174 182 196 177 189 176 100 53 48 85 92 77 104 54 70 88 102 163 101 194 150 35 40 41 43</file>
         </tool>
       </inputs>
     </file>
@@ -338,21 +346,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 184</file>
+          <file> 123</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 62</file>
+          <file> 207</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 24 197 32 37 30 25 204 120 31 34 33 206 111 205 109 116 121 51 199 153 35 36 44 45 29 200 123 136 106 40 46 41 43 115 102 119 147 38</file>
+          <file> 166 136 174 181 176 169 142 71 171 178 177 146 62 144 60 68 72 196 140 105 179 180 185 190 172 139 73 87 57 183 189 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -361,21 +369,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 190</file>
+          <file> 131</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 58</file>
+          <file> 203</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 200 109 140 120 121 123 153 105 136 150 137 97 133 125 116 119 115 102 118 101 152</file>
+          <file> 139 60 92 71 72 73 105 54 87 102 88 48 85 77 68 67 66 50 70 53 104</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 101 97 116 120 200 115 102 121 123 119 109 133 153 140 125 152 105 136 118 137 150</file>
+          <file> 53 48 68 71 139 66 50 72 73 67 60 85 105 92 77 104 54 87 70 88 102</file>
         </tool>
       </inputs>
     </file>
@@ -384,21 +392,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 189</file>
+          <file> 129</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 59</file>
+          <file> 204</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 34 153 152 43 206 36 116 120 40 23 125 148 31 33 45 115 204 46 97 119 205 39 24 37 32 30 35 44 41 102 51 101 50 133 199 197 111 25 109 29 200 121 123 136 106 147 38 137 149 210 140 105 118 150</file>
+          <file> 174 146 68 223 166 179 71 196 194 100 181 176 185 186 50 67 53 85 144 184 220 171 178 177 180 190 188 66 142 183 189 163 48 77 105 104 140 136 62 169 60 172 139 72 73 87 57 96 182 88 101 150 92 54 70 102</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 153 205 199 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30 148 101 97 133 140 125 152 105 118 137 150 23 149 50 210 39</file>
+          <file> 105 144 140 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176 100 53 48 85 92 77 104 54 70 88 102 163 101 194 150 184 223 220</file>
         </tool>
       </inputs>
     </file>
@@ -407,21 +415,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 185</file>
+          <file> 127</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 60</file>
+          <file> 205</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 36 199 45 204 120 153 35 44 109 116 121 206 51 24 31 37 34 32 33 30 197 111 205 25 29 200 123 136 106 40 46 41 43 115 102 119 147 38</file>
+          <file> 180 140 190 142 71 105 179 185 60 68 72 146 196 166 171 181 178 174 177 176 136 62 144 169 172 139 73 87 57 183 189 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -430,21 +438,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 186</file>
+          <file> 128</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 66</file>
+          <file> 211</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 109 153 43 206 149 36 116 120 40 137 140 143 199 45 115 204 46 210 118 197 148 24 31 37 35 44 41 102 119 51 105 136 150 23 205 34 32 33 30 111 25 29 200 121 123 106 147 38 101 50 97 133 125 152</file>
+          <file> 60 105 188 146 101 180 68 71 183 88 92 95 140 190 66 142 189 150 70 136 100 166 171 181 179 185 186 50 67 196 54 87 102 163 144 178 174 177 176 62 169 172 139 72 73 57 96 182 53 194 48 85 77 104</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30 143 148 101 97 133 140 125 152 105 118 137 150 23 149 50 210</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176 95 100 53 48 85 92 77 104 54 70 88 102 163 101 194 150</file>
         </tool>
       </inputs>
     </file>
@@ -453,21 +461,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 188</file>
+          <file> 130</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 65</file>
+          <file> 208</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 41 153 45 102 120 44 116 35 206 51 205 25 109 43 115 204 199 36 106 40 46 197 29 200 121 123 136 24 31 37 34 32 33 30 111 119 147 38</file>
+          <file> 186 105 190 50 71 185 68 179 146 196 144 169 60 188 66 142 140 180 57 183 189 136 172 139 72 73 87 166 171 181 178 174 177 176 62 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 205 199 153 24 206 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 144 140 105 166 146 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -476,21 +484,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 183</file>
+          <file> 125</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 61</file>
+          <file> 206</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 36 109 199 204 120 153 35 44 116 121 206 51 24 31 37 34 32 33 30 197 111 205 25 29 200 123 136 106 40 46 45 41 43 115 102 119 147 38</file>
+          <file> 180 60 140 142 71 105 179 185 68 72 146 196 166 171 181 178 174 177 176 136 62 144 169 172 139 73 87 57 183 189 190 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -499,21 +507,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 187</file>
+          <file> 124</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 63</file>
+          <file> 209</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 45 199 36 204 120 153 35 44 109 116 121 206 51 24 31 37 34 32 33 30 197 111 205 25 29 200 123 136 106 40 46 41 43 115 102 119 147 38</file>
+          <file> 190 140 180 142 71 105 179 185 60 68 72 146 196 166 171 181 178 174 177 176 136 62 144 169 172 139 73 87 57 183 189 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -522,21 +530,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 196</file>
+          <file> 138</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 57</file>
+          <file> 202</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 199 109 204 120 153 35 111 205 116 121 206 51 24 31 37 34 32 33 30 197 25 29 200 123 136 106 40 46 36 44 45 41 43 115 102 119 147 38</file>
+          <file> 140 60 142 71 105 179 62 144 68 72 146 196 166 171 181 178 174 177 176 136 169 172 139 73 87 57 183 189 180 185 190 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -545,21 +553,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 191</file>
+          <file> 126</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 71</file>
+          <file> 199</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 33 31 206 109 34 204 120 24 37 32 30 111 205 116 121 51 199 153 35 197 25 29 200 123 136 106 40 46 36 44 45 41 43 115 102 119 147 38</file>
+          <file> 177 171 146 60 178 142 71 166 181 174 176 62 144 68 72 196 140 105 179 136 169 172 139 73 87 57 183 189 180 185 190 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -568,21 +576,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 182</file>
+          <file> 117</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 48</file>
+          <file> 192</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 109 199 204 120 153 35 111 205 116 121 206 51 24 31 37 34 32 33 30 197 25 29 200 123 136 106 40 46 36 44 45 41 43 115 102 119 147 38</file>
+          <file> 60 140 142 71 105 179 62 144 68 72 146 196 166 171 181 178 174 177 176 136 169 172 139 73 87 57 183 189 180 185 190 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -591,21 +599,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 195</file>
+          <file> 137</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 72</file>
+          <file> 23</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 153 44 35 204 120 199 36 45 109 116 121 206 51 24 31 37 34 32 33 30 197 111 205 25 29 200 123 136 106 40 46 41 43 115 102 119 147 38</file>
+          <file> 105 185 179 142 71 140 180 190 60 68 72 146 196 166 171 181 178 174 177 176 136 62 144 169 172 139 73 87 57 183 189 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -614,21 +622,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 166</file>
+          <file> 110</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 47</file>
+          <file> 191</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 25 30 37 24 32 197 204 120 31 34 33 206 111 205 109 116 121 51 199 153 35 36 44 45 29 200 123 136 106 40 46 41 43 115 102 119 147 38</file>
+          <file> 169 176 181 166 174 136 142 71 171 178 177 146 62 144 60 68 72 196 140 105 179 180 185 190 172 139 73 87 57 183 189 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -637,21 +645,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 198</file>
+          <file> 133</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 68</file>
+          <file> 213</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 24 197 32 109 37 30 204 120 31 34 33 206 111 205 116 121 51 199 153 35 36 44 25 29 200 123 136 106 40 46 45 41 43 115 102 119 147 38</file>
+          <file> 166 136 174 60 181 176 142 71 171 178 177 146 62 144 68 72 196 140 105 179 180 185 169 172 139 73 87 57 183 189 190 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -660,21 +668,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 176</file>
+          <file> 99</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 74</file>
+          <file> 26</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 35 153 44 204 120 199 36 45 109 116 121 206 51 24 31 37 34 32 33 30 197 111 205 25 29 200 123 136 106 40 46 41 43 115 102 119 147 38</file>
+          <file> 179 105 185 142 71 140 180 190 60 68 72 146 196 166 171 181 178 174 177 176 136 62 144 169 172 139 73 87 57 183 189 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -683,21 +691,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 192</file>
+          <file> 134</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 73</file>
+          <file> 25</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 34 109 31 33 206 204 120 24 37 32 30 111 205 116 121 51 199 153 35 197 25 29 200 123 136 106 40 46 36 44 45 41 43 115 102 119 147 38</file>
+          <file> 178 60 171 177 146 142 71 166 181 174 176 62 144 68 72 196 140 105 179 136 169 172 139 73 87 57 183 189 180 185 190 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -706,21 +714,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 194</file>
+          <file> 132</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 75</file>
+          <file> 28</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 35 109 153 204 120 199 36 205 116 121 206 51 24 31 37 34 32 33 30 197 111 25 29 200 123 136 106 40 46 44 45 41 43 115 102 119 147 38</file>
+          <file> 179 60 105 142 71 140 180 144 68 72 146 196 166 171 181 178 174 177 176 136 62 169 172 139 73 87 57 183 189 185 190 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -729,90 +737,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 193</file>
+          <file> 135</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 76</file>
+          <file> 29</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 120 204 34 109 199 31 33 206 111 205 116 121 51 24 37 32 30 197 25 29 200 123 136 106 40 46 153 35 36 44 45 41 43 115 102 119 147 38</file>
+          <file> 71 142 178 60 140 171 177 146 62 144 68 72 196 166 181 174 176 136 169 172 139 73 87 57 183 189 105 179 180 185 190 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Src\cwm\cwmAlgorithmHal.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 69</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 55</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 200 120 101 133 119 121 139 118 203 27 116 107 123 144 122 26 28 97 125 109 105 98 115 102 137 140 153 152 136 150</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 98 116 120 200 115 102 121 123 119 107 144 27 109 139 122 101 97 133 153 140 125 152 105 136 118 137 150 26 28 203</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Src\cwm\osTask\cwmTaskSen.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 177</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 49</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 116 151 109 115 152 149 140 119 102 136 137 23 154 122 97 133 125 120 200 121 123 153 139 101 105 118 150</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 101 97 116 120 200 115 102 121 123 119 109 133 153 140 125 152 105 136 118 23 137 150 149 154 151 122 139</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Src\cwm\cwmApp.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 181</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 42</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 152 116 137 140 109 212 102 119 111 151 120 115 139 136 144 122 27 103 107 200 121 123 106 101 97 133 125 153 150 98 105 118</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 98 116 120 200 115 102 121 123 119 107 144 111 106 122 139 101 97 109 133 153 140 125 152 105 136 118 137 150 212 27 151 103</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -821,21 +760,90 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 171</file>
+          <file> 113</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 146</file>
+          <file> 98</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 97 116 120 118 122 106 115 107 125 98 103 119 102 101 133 109 105 111 200 121 123 139 137 140 153 152 136 150</file>
+          <file> 48 68 71 70 74 57 66 58 77 49 55 67 50 53 85 60 54 62 139 72 73 91 88 92 105 104 87 102</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 111 116 120 200 115 102 121 123 119 106 98 107 122 139 101 97 109 133 153 140 125 152 105 136 118 137 150 103</file>
+          <file> 62 68 71 139 66 50 72 73 67 57 49 58 74 91 53 48 60 85 105 92 77 104 54 87 70 88 102 55</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Src\cwm\cwmAlgorithmHal.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 214</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 200</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 139 71 53 85 67 72 91 70 145 173 68 58 73 89 74 175 170 48 77 60 54 49 66 50 88 92 105 104 87 102</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 49 68 71 139 66 50 72 73 67 58 89 173 60 91 74 53 48 85 105 92 77 104 54 87 70 88 102 175 170 145</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Src\cwm\osTask\cwmTaskSen.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 119</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 195</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 68 103 60 66 104 101 92 67 50 87 88 163 106 74 48 85 77 71 139 72 73 105 91 53 54 70 102</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 53 48 68 71 139 66 50 72 73 67 60 85 105 92 77 104 54 87 70 163 88 102 101 106 103 74 91</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Src\cwm\cwmApp.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 122</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 187</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 68 88 92 60 153 50 67 62 103 71 66 91 87 89 74 173 55 58 139 72 73 57 53 48 85 77 105 102 49 54 70</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 49 68 71 139 66 50 72 73 67 58 89 62 57 74 91 53 48 60 85 105 92 77 104 54 87 70 88 102 153 173 103 55</file>
         </tool>
       </inputs>
     </file>
@@ -844,90 +852,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 174</file>
+          <file> 115</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 138</file>
+          <file> 90</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 136 116 155 140 119 102 149 109 115 152 137 23 154 122 97 133 125 120 200 121 123 153 139 101 105 118 150</file>
+          <file> 87 68 107 92 67 50 101 60 66 104 88 163 106 74 48 85 77 71 139 72 73 105 91 53 54 70 102</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 101 97 116 120 200 115 102 121 123 119 109 133 153 140 125 152 105 136 118 23 137 150 149 154 155 122 139</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Src\cwm\driver\DriverBMI160_SPI.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 172</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 145</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 207 120 116 64 139 121 212 109 200 123 115 102</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 139 212 109 116 120 200 115 102 121 123 64 207</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Src\cwm\cwmGpioConfig.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 180</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 56</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 120 115 116 102 139 200 121 123 109</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 109 116 120 200 115 102 121 123 139</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Src\cwm\cwmDriverHal.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 179</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 52</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 116 150 120 102 125 137 139 115 97 153 101 103 207 109 200 121 123 133 152 136 212 140 119 105 118</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 212 109 116 120 200 115 102 121 123 139 101 97 119 133 153 140 125 152 105 136 118 137 150 103 207</file>
+          <file> 53 48 68 71 139 66 50 72 73 67 60 85 105 92 77 104 54 87 70 163 88 102 101 106 107 74 91</file>
         </tool>
       </inputs>
     </file>
@@ -936,13 +875,82 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 208</file>
+          <file> 148</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 213 70 77 53 93 81 58 80 67 59 173 82 175 92 170 61 62 57 63 71 48 47 72 60 68 74 73 75 76 78 79 66 65 163 169 211 209 215 96 214</file>
+          <file> 152 215 27 198 217 219 45 32 203 33 212 204 114 34 116 44 109 206 207 202 209 199 192 191 23 205 213 26 25 28 29 30 31 211 208 108 111 151 149 154 39 155</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Src\cwm\driver\DriverBMI160_SPI.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 112</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 147 71 68 210 91 72 153 60 139 73 66 50</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 91 153 60 68 71 139 66 50 72 73 210 147</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Src\cwm\cwmGpioConfig.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 121</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 201</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 71 66 68 50 91 139 72 73 60</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 60 68 71 139 66 50 72 73 91</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Src\cwm\cwmDriverHal.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 120</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 197</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 68 102 71 50 77 88 91 66 48 105 53 55 147 60 139 72 73 85 104 87 153 92 67 54 70</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 153 60 68 71 139 66 50 72 73 91 53 48 67 85 105 92 77 104 54 87 70 88 102 55 147</file>
         </tool>
       </inputs>
     </file>
@@ -951,21 +959,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 114</file>
+          <file> 63</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 79</file>
+          <file> 31</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 205 111 31 206 33 34 109 204 120 24 37 32 30 197 25 116 121 51 199 153 35 36 44 45 29 200 123 136 106 40 46 41 43 115 102 119 147 38</file>
+          <file> 144 62 171 146 177 178 60 142 71 166 181 174 176 136 169 68 72 196 140 105 179 180 185 190 172 139 73 87 57 183 189 186 188 66 50 67 96 182</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 205 199 153 24 206 197 44 25 109 116 120 200 115 102 121 123 41 204 136 29 43 45 36 111 119 106 35 31 40 37 147 34 32 38 51 33 46 30</file>
+          <file> 144 140 105 166 146 136 185 169 60 68 71 139 66 50 72 73 186 142 87 172 188 190 180 62 67 57 179 171 183 181 96 178 174 182 196 177 189 176</file>
         </tool>
       </inputs>
     </file>
@@ -974,21 +982,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 117</file>
+          <file> 69</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 77</file>
+          <file> 27</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 200 109 140 120 121 123 153 105 136 150 137 97 133 125 116 119 115 102 118 101 142 152</file>
+          <file> 139 60 92 71 72 73 105 54 87 102 88 48 85 77 68 67 66 50 70 53 94 104</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 101 97 116 120 200 115 102 121 123 119 109 133 153 140 125 152 105 136 118 137 150 142</file>
+          <file> 53 48 68 71 139 66 50 72 73 67 60 85 105 92 77 104 54 87 70 88 102 94</file>
         </tool>
       </inputs>
     </file>
@@ -997,21 +1005,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 201</file>
+          <file> 141</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 70</file>
+          <file> 215</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 23 133 119 121 120 152 204 116 107 200 123 101 50 97 125 136 148 115 102 137 149 210 109 140 153 150 98 105 118</file>
+          <file> 163 85 67 72 71 104 142 68 58 139 73 53 194 48 77 87 100 66 50 88 101 150 60 92 105 102 49 54 70</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 98 116 120 200 115 102 121 123 119 107 148 101 97 109 133 153 140 125 152 105 136 118 137 150 23 149 50 210 204</file>
+          <file> 49 68 71 139 66 50 72 73 67 58 100 53 48 60 85 105 92 77 104 54 87 70 88 102 163 101 194 150 142</file>
         </tool>
       </inputs>
     </file>
@@ -1020,21 +1028,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 99</file>
+          <file> 51</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 81</file>
+          <file> 32</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 120 116 23 101 121 115 140 137 210 119 102 109 152 144 200 123 97 133 125 153 105 118 136 150</file>
+          <file> 71 68 163 53 72 66 92 88 150 67 50 60 104 89 139 73 48 85 77 105 54 70 87 102</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 144 116 120 200 115 102 121 123 119 101 97 109 133 153 140 125 152 105 136 118 137 150 23 210</file>
+          <file> 89 68 71 139 66 50 72 73 67 53 48 60 85 105 92 77 104 54 87 70 88 102 163 150</file>
         </tool>
       </inputs>
     </file>
@@ -1043,13 +1051,13 @@
       <outputs>
         <tool>
           <name>AARM</name>
-          <file> 82</file>
+          <file> 34</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>AARM</name>
-          <file> 133</file>
+          <file> 85</file>
         </tool>
       </inputs>
     </file>
@@ -1058,21 +1066,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 100</file>
+          <file> 52</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 80</file>
+          <file> 33</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 123 120 118 121 125 101 116 97 119 137 200 133 153 105 136 150 144 115 102 109 140 152</file>
+          <file> 73 71 70 72 77 53 68 48 67 88 139 85 105 54 87 102 89 66 50 60 92 104</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 144 116 120 200 115 102 121 123 119 101 97 109 133 153 140 125 152 105 136 118 137 150</file>
+          <file> 89 68 71 139 66 50 72 73 67 53 48 60 85 105 92 77 104 54 87 70 88 102</file>
         </tool>
       </inputs>
     </file>
@@ -1081,21 +1089,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 104</file>
+          <file> 56</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 67</file>
+          <file> 212</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 140 116 121 123 150 119 200 120 101 115 102 109 152 144 97 133 125 153 105 118 136</file>
+          <file> 92 68 72 73 102 67 139 71 53 66 50 60 104 89 48 85 77 105 54 70 87</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 144 116 120 200 115 102 121 123 119 101 97 109 133 153 140 125 152 105 136 118 150</file>
+          <file> 89 68 71 139 66 50 72 73 67 53 48 60 85 105 92 77 104 54 87 70 102</file>
         </tool>
       </inputs>
     </file>
@@ -1104,21 +1112,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 113</file>
+          <file> 65</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 173</file>
+          <file> 114</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 116 140 102 137 120 118 101 109 115 153 105 136 150 97 133 125 119 200 121 123 152</file>
+          <file> 68 92 50 88 71 70 53 60 66 105 54 87 102 48 85 77 67 139 72 73 104</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 136 116 101 97 120 200 115 102 121 123 119 109 133 153 140 125 152 105 118 137 150</file>
+          <file> 87 68 53 48 71 139 66 50 72 73 67 60 85 105 92 77 104 54 70 88 102</file>
         </tool>
       </inputs>
     </file>
@@ -1127,21 +1135,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 110</file>
+          <file> 61</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 175</file>
+          <file> 116</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 116 120 102 137 109 152 121 115 140 98 101 149 119 200 123 107 97 133 125 153 105 118 136 144 150</file>
+          <file> 68 71 50 88 60 104 72 66 92 49 53 101 67 139 73 58 48 85 77 105 54 70 87 89 102</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 144 116 120 200 115 102 121 123 119 98 107 101 97 109 133 153 140 125 152 105 136 118 137 150 149</file>
+          <file> 89 68 71 139 66 50 72 73 67 49 58 53 48 60 85 105 92 77 104 54 87 70 88 102 101</file>
         </tool>
       </inputs>
     </file>
@@ -1150,21 +1158,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 112</file>
+          <file> 64</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 163</file>
+          <file> 108</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 120 121 116 137 115 140 141 102 109 152 98 101 23 119 200 123 107 97 133 125 144 153 105 118 136 150</file>
+          <file> 71 72 68 88 66 92 93 50 60 104 49 53 163 67 139 73 58 48 85 77 89 105 54 70 87 102</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 144 116 120 200 115 102 121 123 119 98 107 101 97 109 133 153 140 125 152 105 136 118 137 150 23 141</file>
+          <file> 89 68 71 139 66 50 72 73 67 49 58 53 48 60 85 105 92 77 104 54 87 70 88 102 163 93</file>
         </tool>
       </inputs>
     </file>
@@ -1173,21 +1181,67 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 124</file>
+          <file> 76</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 169</file>
+          <file> 111</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 105 200 133 153 136 149 150 101 119 116 137 23 121 123 120 97 125 118 144 115 102 109 140 152</file>
+          <file> 54 139 85 105 87 101 102 53 67 68 88 163 72 73 71 48 77 70 89 66 50 60 92 104</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 144 116 120 200 115 102 121 123 119 101 97 109 133 153 140 125 152 105 136 118 137 150 149 23</file>
+          <file> 89 68 71 139 66 50 72 73 67 53 48 60 85 105 92 77 104 54 87 70 88 102 101 163</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Src\CWM_TASK2.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 218</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 219</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 188 71 73 178 68 180 146 144 139 140 171 177 190 104 41 105 35 57 72 166 181 174 176 179 185 186 142 183 182 101 92 67 87 49 220 100 66 50 58 136 62 169 60 172 96 88 150 102 196 189 53 163 194 48 85 77 54 70 40 43</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 62 68 71 139 66 50 72 73 67 57 49 58 105 220 144 140 166 146 136 185 169 60 186 142 87 172 188 190 180 179 171 183 181 96 178 174 182 196 177 189 176 100 53 48 85 92 77 104 54 70 88 102 163 101 194 150 35 40 41 43</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Src\CWM_TASK1.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 216</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 217</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 188 71 73 178 68 180 146 144 139 140 171 177 190 104 41 105 35 57 72 166 181 174 176 179 185 186 142 183 182 101 92 67 87 49 223 100 66 50 58 136 62 169 60 172 96 88 150 102 196 189 53 163 194 48 85 77 54 70 40 43</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 62 68 71 139 66 50 72 73 67 57 49 58 105 223 144 140 166 146 136 185 169 60 186 142 87 172 188 190 180 179 171 183 181 96 178 174 182 196 177 189 176 100 53 48 85 92 77 104 54 70 88 102 163 101 194 150 35 40 41 43</file>
         </tool>
       </inputs>
     </file>

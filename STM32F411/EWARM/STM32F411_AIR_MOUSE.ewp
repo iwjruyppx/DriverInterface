@@ -1001,6 +1001,12 @@
         <name>$PROJ_DIR$\..\Src\CWM_TASK.c</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\Src\CWM_TASK1.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\Src\CWM_TASK2.c</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\Src\freertos.c</name>
       </file>
       <file>

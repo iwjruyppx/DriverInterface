@@ -4,6 +4,8 @@
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
 #include "CWM_TASK.h"
+#include "CWM_TASK1.h"
+#include "CWM_TASK2.h"
 
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi2;
@@ -36,6 +38,8 @@ int main(void)
   /* definition and creation of defaultTask */
   /* command task create: default ON */
   CWM_TASK_INIT();
+  CWM_TASK1_INIT();
+  CWM_TASK2_INIT();
 
   /* Start scheduler */
   osKernelStart();

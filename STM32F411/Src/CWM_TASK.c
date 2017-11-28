@@ -17,6 +17,9 @@ DriverHandle_t accHandle;
 DriverHandle_t gyroHandle;
 DriverAPI driverAPI;
 
+#define ACC_CMD(x, y)   accHandle.Cmd(&accHandle, x, y)
+#define GYRO_CMD(x, y)   gyroHandle.Cmd(&gyroHandle, x, y)
+
 static int spiWrite(uint8_t *pBuffer, uint8_t WriteAddr, uint16_t NumByteToWrite )
 {
     uint8_t pTxData[255];
@@ -120,20 +123,20 @@ static void driver_init(void)
 int accEn(int en)
 {
     if(en)
-        return accHandle.Cmd(&accHandle, senEnable, NULL);
+        return ACC_CMD( senEnable, NULL);
     else
-        return accHandle.Cmd(&accHandle, senDisable, NULL);        
+        return ACC_CMD( senDisable, NULL);        
 }
 
 int accSetRate(int rate)
 {
     uint8_t u8rate = (uint8_t) rate;
-    return accHandle.Cmd(&accHandle, senSetRate, &u8rate);
+    return ACC_CMD( senSetRate, &u8rate);
 }
 
 void accSendataProcess(void)
 {
-    accHandle.Cmd(&accHandle, senGetData, NULL);
+    ACC_CMD( senGetData, NULL);
 }
 
 int accSenDataTest(void)
@@ -164,15 +167,15 @@ int accSenDataTest(void)
 int gyroEn(int en)
 {
     if(en)
-        return gyroHandle.Cmd(&gyroHandle, senEnable, NULL);
+        return GYRO_CMD( senEnable, NULL);
     else
-        return gyroHandle.Cmd(&gyroHandle, senDisable, NULL);
+        return GYRO_CMD( senDisable, NULL);
 }
 
 int gyroSetRate(int rate)
 {
     uint8_t u8rate = (uint8_t) rate;
-    return gyroHandle.Cmd(&gyroHandle, senSetRate, &u8rate);
+    return GYRO_CMD( senSetRate, &u8rate);
 }
 
 int gyroSenDataTest(void)
@@ -183,7 +186,7 @@ int gyroSenDataTest(void)
     osDelay(100);
     for (;;)
     {
-        gyroHandle.Cmd(&gyroHandle, senGetData, NULL);
+        GYRO_CMD( senGetData, NULL);
         osDelay(10);
         if (count++ > 1000)
         {
@@ -194,7 +197,7 @@ int gyroSenDataTest(void)
     gyroEn(0);
     for (;;)
     {
-        gyroHandle.Cmd(&gyroHandle, senGetData, NULL);
+        GYRO_CMD( senGetData, NULL);
         osDelay(10);
     }
 }
@@ -212,13 +215,13 @@ static void CWM_Task(const void *argument)
             accSenDataTest();
             break;
         case 1:
-            accSelfTestStatus =  accHandle.Cmd(&accHandle, senSelftest, NULL);
+            accSelfTestStatus =  ACC_CMD( senSelftest, NULL);
             break;
         case 11:
             gyroSenDataTest();
             break;
         case 12:
-            gyroSelfTestStatus =  gyroHandle.Cmd(&gyroHandle, senSelftest, NULL);
+            gyroSelfTestStatus =  GYRO_CMD( senSelftest, NULL);
             break;
         default:
             break;

@@ -324,10 +324,7 @@
           <state>$PROJ_DIR$/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS</state>
           <state>$PROJ_DIR$/../Drivers/CMSIS/Include</state>
           <state>$PROJ_DIR$/../Src/cwm</state>
-          <state>$PROJ_DIR$/../Src/cwm/algo</state>
-          <state>$PROJ_DIR$/../Src/cwm/driver</state>
-          <state>$PROJ_DIR$/../Src/cwm/customIntf</state>
-          <state>$PROJ_DIR$/../Src/cwm/osTask</state>
+          <state>$PROJ_DIR$/../../</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -980,6 +977,18 @@
   </configuration>
   <group>
     <name>Application</name>
+    <group>
+      <name>CWM</name>
+      <group>
+        <name>Driver</name>
+        <file>
+          <name>$PROJ_DIR$\..\..\DriverHal_1_0.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\..\SPI_BMI160.c</name>
+        </file>
+      </group>
+    </group>
     <group>
       <name>EWARM</name>
       <file>

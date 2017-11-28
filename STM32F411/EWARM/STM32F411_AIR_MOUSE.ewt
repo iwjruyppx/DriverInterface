@@ -1161,6 +1161,18 @@
   <group>
     <name>Application</name>
     <group>
+      <name>CWM</name>
+      <group>
+        <name>Driver</name>
+        <file>
+          <name>$PROJ_DIR$\..\..\DriverHal_1_0.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\..\SPI_BMI160.c</name>
+        </file>
+      </group>
+    </group>
+    <group>
       <name>EWARM</name>
       <file>
         <name>$PROJ_DIR$\startup_stm32f411xe.s</name>

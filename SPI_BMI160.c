@@ -424,7 +424,7 @@ static void accDataVerify(pDriverHandle_t pHandle, int16_t *datas16_raw)
     }
 }
 
-static int DriverBmi160AccGetData(pDriverHandle_t pHandle, void *data){
+static int AccGetData(pDriverHandle_t pHandle, void *data){
     uint8_t tmpreg[6] ={0};
     int16_t datas16_raw[3];
     float	senData[3];
@@ -568,7 +568,7 @@ static int SPI_BMI160_CMD_ACC(pDriverHandle_t pHandle, int cmd, void *data)
         case senSetMode:
             return AccSetMode(pHandle, ((int *)data)[0]);
         case senGetData:
-            return DriverBmi160AccGetData(pHandle, data);
+            return AccGetData(pHandle, data);
         case senGetStatus:
             return AccGetStatus(pHandle, data);
         case senGetInfo:
@@ -717,7 +717,7 @@ static int GyroGetStatus(pDriverHandle_t pHandle, void *data){
     return 0;
 }
 
-static int DriverBmi160GyroGetData(pDriverHandle_t pHandle, void *data)
+static int GyroGetData(pDriverHandle_t pHandle, void *data)
 {
     uint8_t tmpreg[6] ={0};
     int16_t datas16_raw[3];
@@ -820,7 +820,7 @@ static int SPI_BMI160_CMD_GYRO(pDriverHandle_t pHandle, int cmd, void *data)
             BMI160.gyroMode= ((int *)data)[0];
             return GyroSetMode(pHandle, BMI160.gyroMode);
         case senGetData:
-            return DriverBmi160GyroGetData(pHandle, data);
+            return GyroGetData(pHandle, data);
         case senGetStatus:
             return GyroGetStatus(pHandle, data);
         case senGetInfo:

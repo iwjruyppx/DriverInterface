@@ -65,9 +65,13 @@ int64_t GetTimeNs(void)
 void error(int error, void *data){
 }
 
-float gAccData[3];
+float gData[3];
+int  gDataInt[3];
 void dataCb(pDriverConfig drvInfo, float *data, void *reserved){
-    memcpy(gAccData, data, sizeof(float)*3);
+    int i;
+    memcpy(gData, data, sizeof(float)*3);
+    for(i=0;i<3;i++)
+        gDataInt[i] = gData[i] * 1000;
 }
 
 static void driver_init(void)
@@ -113,9 +117,12 @@ static void driver_init(void)
     senSelftest,
 */
 
-int accEn(void)
+int accEn(int en)
 {
-    return accHandle.Cmd(&accHandle, senEnable, NULL);
+    if(en)
+        return accHandle.Cmd(&accHandle, senEnable, NULL);
+    else
+        return accHandle.Cmd(&accHandle, senDisable, NULL);        
 }
 
 int accSetRate(int rate)
@@ -124,20 +131,101 @@ int accSetRate(int rate)
     return accHandle.Cmd(&accHandle, senSetRate, &u8rate);
 }
 
-void dataProcess(void)
+void accSendataProcess(void)
 {
     accHandle.Cmd(&accHandle, senGetData, NULL);
 }
 
-static void CWM_Task(const void *argument)
-{  
-    driver_init();
-    accEn();
+int accSenDataTest(void)
+{
+    int count = 0;
+    accEn(1);
     accSetRate(FASTEST);
     osDelay(100);
     for (;;)
     {
-        dataProcess();
+        accSendataProcess();
+        osDelay(10);
+        if (count++ > 1000)
+        {
+            count = 0;
+            break;
+        }
+    }
+    accEn(0);
+    osDelay(100);
+    for (;;)
+    {
+        accSendataProcess();
+        osDelay(10);
+    }
+}
+
+int gyroEn(int en)
+{
+    if(en)
+        return gyroHandle.Cmd(&gyroHandle, senEnable, NULL);
+    else
+        return gyroHandle.Cmd(&gyroHandle, senDisable, NULL);
+}
+
+int gyroSetRate(int rate)
+{
+    uint8_t u8rate = (uint8_t) rate;
+    return gyroHandle.Cmd(&gyroHandle, senSetRate, &u8rate);
+}
+
+int gyroSenDataTest(void)
+{
+    int count = 0;
+    gyroEn(1);
+    gyroSetRate(FASTEST);
+    osDelay(100);
+    for (;;)
+    {
+        gyroHandle.Cmd(&gyroHandle, senGetData, NULL);
+        osDelay(10);
+        if (count++ > 1000)
+        {
+            count = 0;
+            break;
+        }
+    }
+    gyroEn(0);
+    for (;;)
+    {
+        gyroHandle.Cmd(&gyroHandle, senGetData, NULL);
+        osDelay(10);
+    }
+}
+
+static int accSelfTestStatus = 0;
+static int gyroSelfTestStatus = 0;
+static void CWM_Task(const void *argument)
+{  
+    driver_init();
+    int testCase = 11;
+
+    switch (testCase)
+    {
+        case 0:
+            accSenDataTest();
+            break;
+        case 1:
+            accSelfTestStatus =  accHandle.Cmd(&accHandle, senSelftest, NULL);
+            break;
+        case 11:
+            gyroSenDataTest();
+            break;
+        case 12:
+            gyroSelfTestStatus =  gyroHandle.Cmd(&gyroHandle, senSelftest, NULL);
+            break;
+        default:
+            break;
+    }
+    
+    for (;;)
+    {
         osDelay(10);
     }
 }

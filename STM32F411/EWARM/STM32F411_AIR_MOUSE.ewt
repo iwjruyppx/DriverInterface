@@ -1165,6 +1165,21 @@
       <group>
         <name>Driver</name>
         <file>
+          <name>$PROJ_DIR$\..\..\..\..\..\..\..\work\HTC\SVN\HTC_M9_B5\source\Projects\Demo752\cywee\Driver\library\akm\src\Akm.a</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\..\..\..\..\..\..\work\HTC\SVN\HTC_M9_B5\source\Projects\Demo752\cywee\Driver\library\AKM09911AG\akm09911ag.a</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\..\..\..\..\..\..\work\HTC\SVN\HTC_M9_B5\source\Projects\Demo752\cywee\Driver\library\AKM09911AG\akm09916ag.a</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\..\..\..\..\..\..\work\HTC\SVN\HTC_M9_B5\source\Projects\Demo752\cyweelibrary.a</name>
+        </file>
+      </group>
+      <group>
+        <name>Driver_1_0</name>
+        <file>
           <name>$PROJ_DIR$\..\..\DriverHal_1_0.c</name>
         </file>
         <file>

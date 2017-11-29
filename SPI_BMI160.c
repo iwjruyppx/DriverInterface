@@ -584,7 +584,7 @@ static int SPI_BMI160_CMD_ACC(pDriverHandle_t pHandle, int cmd, void *data)
 static int GyroCleanFifo(pDriverHandle_t pHandle ){
     uint8_t data1 = 0;
     data1 =BMI160_CMD_CLEAN_FIFO_DATA;
-    if(Write(pHandle, BMI160_CMD_REG,&data1 ,1) == I2C_FAIL)
+    if(Write(pHandle, BMI160_CMD_REG,&data1 ,1))
         return I2C_FAIL;
     
     return 0 ;
@@ -651,10 +651,8 @@ static int GyroEnable(pDriverHandle_t pHandle, void *data)
 	uint8_t data1 = 0;
 	uint8_t data2 = 0;
 	int rty = 0;
-	
-	if(!Read(pHandle, 0x02,&data1,1) ){
+    if(Read(pHandle, 0x02,&data1,1) )
 		return I2C_FAIL;
-	}
     
 retry:
 	data1 =BMI160_CMD_GYRO_NORMAL;
@@ -662,7 +660,7 @@ retry:
 		return I2C_FAIL;
 	}
 	sleep(pHandle, BMI160_CMD_GYRO_SWITCH_TIME);
-	if(!Read(pHandle, BMI160_PMU_STATUS_REG,&data2,1) ){
+	if(Read(pHandle, BMI160_PMU_STATUS_REG,&data2,1) ){
 		return I2C_FAIL;
 	}
 	if(((data2&BMI160_PMU_STATUS_GYRO_MASK)>>BMI160_PMU_STATUS_GYRO_SHIFT)!=BMI160_PMU_GYRO_NORMAL){
@@ -691,7 +689,7 @@ retry:
 		return I2C_FAIL;
 	}
 	sleep(pHandle, BMI160_CMD_GYRO_SWITCH_TIME);
-	if(!Read(pHandle, BMI160_PMU_STATUS_REG,&data2,1) ){
+	if(Read(pHandle, BMI160_PMU_STATUS_REG,&data2,1) ){
 		return I2C_FAIL;
 	}
 	if(((data2&BMI160_PMU_STATUS_GYRO_MASK)>>BMI160_PMU_STATUS_GYRO_SHIFT)!=BMI160_PMU_GYRO_SUSPEND){
@@ -729,7 +727,7 @@ static int GyroGetData(pDriverHandle_t pHandle, void *data)
     if(BMI160.gyroMode == MODE_GYRO_FIFO_STREAM){
         count = GyroGetStatus(pHandle, NULL);
         if(count <= 0){
-            return CWM_ERROR_NO_DATA;
+            return 1;
         }
     }
     do {
@@ -745,7 +743,7 @@ static int GyroGetData(pDriverHandle_t pHandle, void *data)
                 memcpy(data, senData, sizeof(float)*3);
             err = NO_ERROR;
         }
-    }while(--count <= 0);
+    }while(--count > 0);
     return err;
 }
 
@@ -772,7 +770,7 @@ retry:
 		return I2C_FAIL;
 	}
 	sleep(pHandle, BMI160_CMD_GYRO_SWITCH_TIME);
-	if(!Read(pHandle, BMI160_PMU_STATUS_REG,&data2,1) ){
+	if(Read(pHandle, BMI160_PMU_STATUS_REG,&data2,1) ){
 		return I2C_FAIL;
 	}
 	if(((data2&BMI160_PMU_STATUS_GYRO_MASK)>>BMI160_PMU_STATUS_GYRO_SHIFT)!=BMI160_PMU_GYRO_NORMAL){

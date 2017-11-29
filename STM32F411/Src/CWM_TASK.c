@@ -1,6 +1,8 @@
 
+#if 0
 #include <stdio.h>
 #include <string.h>
+
 #include "main.h"
 #include "CWM_TASK.h"
 #include "stm32f4xx_hal.h"
@@ -239,4 +241,10 @@ void CWM_TASK_INIT(void)
     osThreadDef(Task_Name, CWM_Task, osPriorityNormal, 0, configMINIMAL_STACK_SIZE);
     osThreadCreate(osThread(Task_Name), NULL);
 }
+#else
 
+void CWM_TASK_INIT(void)
+{
+}
+
+#endif

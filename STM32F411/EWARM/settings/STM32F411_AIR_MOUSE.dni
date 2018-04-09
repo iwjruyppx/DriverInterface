@@ -12,7 +12,7 @@ ByteLimit=50
 stlinkserialNo=191E047F
 stlinkfoundProbes=
 [DebugChecksum]
-Checksum=-559494126
+Checksum=-803542828
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -88,21 +88,13 @@ ShowTimeLog=1
 SumEnabled=0
 ShowTimeSum=1
 SumSortOrder=0
-[Disassemble mode]
-mode=0
-[Breakpoints2]
-Bp0=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Src\main.c}.226.1" 0 0 1 "" 0 "" 0
-Bp1=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\Src\CWM_TASK1.c}.97.5" 0 0 1 "" 0 "" 0
-Count=2
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
 Category=_ 0
-[Aliases]
-A0=_ "D:\code\platform\stm32\AIR_MOUSE\STM32F411_AIR_MOUSE\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c" ""
-A1=_ "D:\code\platform\stm32\AIR_MOUSE\STM32F411_AIR_MOUSE\Middlewares\Third_Party\FreeRTOS\Source\tasks.c" ""
-Count=2
-SuppressDialog=1
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
 [DriverProfiling]
 Enabled=0
 Mode=3
@@ -113,6 +105,14 @@ Exclusions=
 Enabled=0
 [CallStackStripe]
 ShowTiming=1
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Bp0=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Src\main.c}.226.1" 0 0 1 "" 0 "" 0
+Bp1=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\..\..\..\..\work\HTC\SVN\HTC_M9_B5\source\Projects\Demo752\cywee\Algorithm\src\AlgorithmHal.c}.166.1" 0 0 1 "" 0 "" 0
+Count=2
+[Aliases]
+A0=_ "D:\code\platform\stm32\AIR_MOUSE\STM32F411_AIR_MOUSE\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c" ""
+A1=_ "D:\code\platform\stm32\AIR_MOUSE\STM32F411_AIR_MOUSE\Middlewares\Third_Party\FreeRTOS\Source\tasks.c" ""
+Count=2
+SuppressDialog=1

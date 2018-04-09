@@ -1158,14 +1158,53 @@
       </data>
     </settings>
   </configuration>
-  <file>
-    <name>$PROJ_DIR$\..\DriverHal_1_0.c</name>
-  </file>
+  <group>
+    <name>CWM</name>
+    <group>
+      <name>Algo</name>
+    </group>
+    <group>
+      <name>Driver</name>
+      <file>
+        <name>$PROJ_DIR$\..\DrvConfig.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\DrvHal.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\DrvHal.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\DrvSPI_BMI160.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\DrvSPI_BMI160.h</name>
+      </file>
+    </group>
+    <group>
+      <name>System</name>
+      <file>
+        <name>$PROJ_DIR$\..\CWM_Utility.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\CWM_Utility.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\OsApi.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\OsApi.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\SenHal.c</name>
+      </file>
+    </group>
+    <file>
+      <name>$PROJ_DIR$\..\CWM_Init.c</name>
+    </file>
+  </group>
   <file>
     <name>$PROJ_DIR$\..\main.c</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\..\SPI_BMI160.c</name>
   </file>
 </project>
 

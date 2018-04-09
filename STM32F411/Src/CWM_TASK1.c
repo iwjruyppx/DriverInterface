@@ -96,8 +96,13 @@ int	SensorsManagerAPISetting(void){
 int SensorsManagerAPICallBack(SensorsDataEvent_T *data){
     if(data->id == ACCELERATION)
         memcpy(&gSenData[0], data, sizeof(SensorsDataEvent_T));
-    if(data->id == GYRO)
+    if(data->id == AIRMOUSE)
+    {
         memcpy(&gSenData[1], data, sizeof(SensorsDataEvent_T));
+     //   printf("%2d,%2d,%2d\n",(int)data->data[0],(int)data->data[1],(int)data->data[2]);
+    }
+    if(data->id == GAME_ROTATION_VECTOR)
+        memcpy(&gSenData[2], data, sizeof(SensorsDataEvent_T));
     return 0;
 }
 
@@ -145,8 +150,10 @@ static void CWM_Task1(const void *argument)
     SensorsManagerAPISetRate(CustomerHandle,ACCELERATION,NORMAL);
     #endif
     osDelay(10);
-    SensorsManagerAPIEnable(CustomerHandle,GYRO);
-    SensorsManagerAPISetRate(CustomerHandle,GYRO,GAME);
+    SensorsManagerAPIEnable(CustomerHandle,AIRMOUSE);
+    SensorsManagerAPISetRate(CustomerHandle,AIRMOUSE,GAME);
+    SensorsManagerAPIEnable(CustomerHandle,GAME_ROTATION_VECTOR);
+    SensorsManagerAPISetRate(CustomerHandle,GAME_ROTATION_VECTOR,GAME);
     for (;;)
     {
         SensorsManagerAPIProcess();

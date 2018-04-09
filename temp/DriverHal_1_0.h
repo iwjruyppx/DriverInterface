@@ -53,6 +53,7 @@ typedef struct{
     int64_t (*GetTimeNs)(void);
     void (*Error)(int, void *);
     void (*DataCb)(pDriverConfig, float *, void *);
+    void (*malloc)(size_t size);
 } DriverAPI, *pDriverAPI;
 
 typedef struct DriverH_t{

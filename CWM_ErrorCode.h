@@ -1,6 +1,6 @@
 
-#ifndef __CWM_ERROR_CODE_H
-#define __CWM_ERROR_CODE_H
+#ifndef __CWM_ERROR_CODE_H__
+#define __CWM_ERROR_CODE_H__
 
 typedef enum {
 	FASTEST = 10,
@@ -24,15 +24,6 @@ typedef enum {
 	MODE_GYRO_FIFO_STREAM,
 	MODE_TEMPERATURE_INIT,
 } SENSORS_MODE;
-
-typedef enum {
-    DATA_BLOCK       = -5,
-    I2C_FAIL						= -4,
-    DRIVER_NO_USE				= -3,
-    SENSORS_NO_INITIAL	= -2,
-    FAIL	= -1,
-    NO_ERROR	= 0
-} ERR_MSG;
 
 typedef enum {
 	INTERRUPT_OFF = 0,
@@ -70,4 +61,4 @@ typedef enum {
 
 #define CWM_SUCCESS 1
 
-#endif /* __CWM_ERROR_CODE_H */
+#endif /* __CWM_ERROR_CODE_H__ */

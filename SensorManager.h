@@ -29,14 +29,14 @@ typedef void (*sensor_listen_handler_t)(pSensorEVT_t sensorEVT);
     static mgr_t mgr_id##_data = { {0} };                  \
     static const mgr_id_t mgr_id = &mgr_id##_data
     
-int MGR_Enable(mgr_id_t const * p_mgr_id, 
+int MGR_Enable(mgr_id_t p_mgr_id, 
                         uint32_t sensorId, 
                         uint32_t index, 
                         uint32_t rate, 
                         uint64_t latency, 
                         void *evtData);
 
-int MGR_Disable(mgr_id_t const * p_mgr_id, uint32_t sensorId, uint32_t index);
+int MGR_Disable(mgr_id_t p_mgr_id, uint32_t sensorId, uint32_t index);
 
 int MGR_Create(mgr_id_t const * p_mgr_id, sensor_listen_handler_t listen);
 

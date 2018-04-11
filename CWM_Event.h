@@ -22,4 +22,16 @@
 #define EVT_SENSOR_DATA_RDY_BASE           0x00010000
 #define EVT_SENSOR_RDY(id)                  ((uint32_t)id | EVT_SENSOR_DATA_RDY_BASE)
 
+/*
+    System event
+        0x00020000 ~ 0x0002FFFF
+*/
+#define EVT_SYSTEM_EVT_BASE           0x00020000
+
+#define EVT_TIMER_5MS_TRIGGER        0x00020001
+#define EVT_TIMER_10MS_TRIGGER        0x00020002
+#define EVT_TIMER_20MS_TRIGGER        0x00020003
+#define EVT_TIMER_100MS_TRIGGER        0x00020004
+#define EVT_TIMER_1000MS_TRIGGER        0x00020005
+
 #endif /* __CWM_EVENT_H__ */

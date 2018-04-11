@@ -23,8 +23,9 @@ typedef struct {
     const SensorInfo *si;
     const SensorOps *callInfo;
     uint16_t index;     //defaule:0, if have another sensor this order add.
-    uint64_t currentLatency; /* here 0 means no batching */
+    uint16_t en;     //defaule:0, if have another sensor this order add.
     uint32_t currentRate;    /* here 0 means off */
+    uint64_t currentLatency; /* here 0 means no batching */
 } Sensor_t, *pSensor_t;
 
 int SensorHalInit(pOsAPI api);

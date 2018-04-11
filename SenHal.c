@@ -42,10 +42,18 @@ int sensorEnable(uint32_t sensorId, uint32_t index, uint32_t rate, uint64_t late
     if(id <0)
         return id;
     pSensor_t p = &senMem.sensor[id];
-    
-    p->callInfo->sensorPower(p->handle, 1, evtData);
-    p->callInfo->sensorSetRate(p->handle, rate, latency, evtData);
-    
+
+    if(p->en == 0)
+    {
+        p->callInfo->sensorPower(p->handle, 1, evtData);
+        p->en = 1;
+    }
+    if((p->currentRate != rate) || (p->currentLatency !=latency))
+    {
+        p->callInfo->sensorSetRate(p->handle, rate, latency, evtData);
+        p->currentRate = rate;
+        p->currentLatency = latency;
+    }
     return CWM_NON;
 }
 
@@ -56,8 +64,13 @@ int sensorDisable(uint32_t sensorId, uint32_t index)
         return id;
     pSensor_t p = &senMem.sensor[id];
     
-    p->callInfo->sensorPower(p->handle, 0, NULL);
-
+    if(p->en == 1)
+    {
+        p->callInfo->sensorPower(p->handle, 0, NULL);
+        p->en = 0;
+        p->currentRate = 0;
+        p->currentLatency = 0;
+    }
     return CWM_NON;
 }
 

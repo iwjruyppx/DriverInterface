@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+#include "CWM_Event.h"
 #include "CWM_ErrorCode.h"
 #include "CWM_Interface.h"
 #include "CWM_SensorList.h"
@@ -154,8 +155,27 @@ static int SPI_BMI160_CMD(void *pHandle, uint32_t evtType, void* evtData)
 {
     pCWMHandle_t pH = (pCWMHandle_t)pHandle;
     pSPI_BMI160_t p = (pSPI_BMI160_t)pH->mem;
+    uint32_t *time = evtData;
+
+    switch(evtType)
+    {
+        case EVT_TIMER_5MS_TRIGGER:
+            printf("[%d,%s]%s,%d\n", __LINE__, __FUNCTION__, "EVT_TIMER_5MS_TRIGGER", time[0]);
+            break;
+        case EVT_TIMER_10MS_TRIGGER:
+            printf("[%d,%s]%s,%d\n", __LINE__, __FUNCTION__, "EVT_TIMER_10MS_TRIGGER", time[0]);
+            break;
+        case EVT_TIMER_20MS_TRIGGER:
+            printf("[%d,%s]%s,%d\n", __LINE__, __FUNCTION__, "EVT_TIMER_20MS_TRIGGER", time[0]);
+            break;
+        case EVT_TIMER_100MS_TRIGGER:
+            printf("[%d,%s]%s,%d\n", __LINE__, __FUNCTION__, "EVT_TIMER_100MS_TRIGGER", time[0]);
+            break;
+        case EVT_TIMER_1000MS_TRIGGER:
+            printf("[%d,%s]%s,%d\n", __LINE__, __FUNCTION__, "EVT_TIMER_1000MS_TRIGGER", time[0]);
+            break;
+    }
     
-    printf("[%d,%s]%X,%X,%X,%X\n", __LINE__, __FUNCTION__, pH->tid, evtType, evtData, p->config.index);
     return 0;
 }
 
@@ -178,9 +198,12 @@ int drvSPI_BMI160(pCWMHandle_t pHandle, pDriverConfig config, pOsAPI api)
         if(sensorRegister(pHandle, p->config.index, &mSensorInfo[i], &mSensorOps[i]))
             return CWM_ERROR_NO_INITIAL;
     }
-    #if 1
-    osSubscribeEvent(0x00010001, pHandle->tid);
-    osSubscribeEvent(0x00010002, pHandle->tid);
+    #if 0
+    osSubscribeEvent(EVT_TIMER_5MS_TRIGGER, pHandle->tid);
+    osSubscribeEvent(EVT_TIMER_10MS_TRIGGER, pHandle->tid);
+    osSubscribeEvent(EVT_TIMER_20MS_TRIGGER, pHandle->tid);
+    osSubscribeEvent(EVT_TIMER_100MS_TRIGGER, pHandle->tid);
     #endif
+    osSubscribeEvent(EVT_TIMER_1000MS_TRIGGER, pHandle->tid);
     return CWM_NON;
 }

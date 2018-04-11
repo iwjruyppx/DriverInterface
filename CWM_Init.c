@@ -60,10 +60,5 @@ void CWM_INIT(void)
 {
     CWM_StateMachineInit();
     Driver_Init();
-    algoInit();
-    sensorEnable(SENS_TYPE_ACCEL, 0, 10, 100, NULL);
-    sensorEnable(SENS_TYPE_ACCEL, 1, 11, 200, NULL);
-    sensorEnable(SENS_TYPE_GYRO, 0, 12, 300, NULL);
-    sensorEnable(SENS_TYPE_GYRO, 1, 13, 400, NULL);
-    
+    algoInit();    
 }

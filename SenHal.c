@@ -16,26 +16,66 @@
 #include "OsApi.h"
 #include "SenHal.h"
 
-#define MAX_SENSOR_TYPE_SUPPORT     20
+#define MAX_SENSOR_TYPE_SUPPORT     10
 
 typedef struct {
+    int regCounter;
     Sensor_t    sensor[MAX_SENSOR_TYPE_SUPPORT];
-    
 } SEN_HAL_t, *pSEN_HAL_t;
 
 static SEN_HAL_t senMem;
 
-
-int sensorRegister(const SensorInfo *si, const SensorOps *ops, uint16_t index)
+static int sensorSearch(uint32_t sensorId, uint32_t index)
 {
+    for(int i = 0; i < senMem.regCounter; i++)
+    {
+        if(senMem.sensor[i].index == index && senMem.sensor[i].si->sensorType == sensorId)
+            return i;
+    }
+    return CWM_ERROR_NOT_FOUND;
+}
+
+
+int sensorEnable(uint32_t sensorId, uint32_t index, uint32_t rate, uint64_t latency, void *evtData)
+{
+    int id = sensorSearch(sensorId, index);
+    if(id <0)
+        return id;
+    pSensor_t p = &senMem.sensor[id];
+    
+    p->callInfo->sensorPower(p->handle, 1, evtData);
+    p->callInfo->sensorSetRate(p->handle, rate, latency, evtData);
+    
+    return CWM_NON;
+}
+
+int sensorDisable(uint32_t sensorId, uint32_t index)
+{
+    int id = sensorSearch(sensorId, index);
+    if(id <0)
+        return id;
+    pSensor_t p = &senMem.sensor[id];
+    
+    p->callInfo->sensorPower(p->handle, 0, NULL);
+
+    return CWM_NON;
+}
+
+int sensorRegister(void *handle, uint16_t index, const SensorInfo *si, const SensorOps *ops)
+{
+    pSensor_t p= &senMem.sensor[senMem.regCounter];
+    senMem.regCounter++;
+    
+    p->handle = handle;
+    p->index = index;
+    p->si = si;
+    p->callInfo = ops;
 
     return CWM_NON;
 }
 
 int SensorHalInit(pOsAPI api)
 {
-    
     return CWM_NON;
 }
-
 

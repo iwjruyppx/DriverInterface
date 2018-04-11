@@ -69,59 +69,69 @@ static uint32_t GyrRates[] = {
     .sensorCalibrate = cal, \
     .sensorSelfTest = test
     
-static int accStepPower(int on, void *cookie)
+static int accStepPower(void *handle, int on, void *cookie)
 {
-
+    pCWMHandle_t p = (pCWMHandle_t)handle;
+    pSPI_BMI160_t mem = (pSPI_BMI160_t)p->mem;
+    printf("[%d,%s]%d,%d\n", __LINE__, __FUNCTION__, mem->config.sensor, mem->config.index);
+    printf("[%d,%s]%X,%X\n", __LINE__, __FUNCTION__, handle, p->mem);
     return CWM_NON;
 }
-static int accSetRate(uint32_t rate, uint64_t latency, void *cookie)
+static int accSetRate(void *handle, uint32_t rate, uint64_t latency, void *cookie)
 {
-
-    return CWM_NON;
-}
-
-static int accCfgData(void *data, void *cookie)
-{
-
-    return CWM_NON;
-}
-
-static int accCalibration(void *cookie)
-{
-
+    pCWMHandle_t p = (pCWMHandle_t)handle;
+    pSPI_BMI160_t mem = (pSPI_BMI160_t)p->mem;
+    printf("[%d,%s]%d,%d,%d,%d\n", __LINE__, __FUNCTION__, mem->config.sensor, mem->config.index, rate, (int)latency);
     return CWM_NON;
 }
 
-static int accSelfTest(void *cookie)
+static int accCfgData(void *handle, void *data, void *cookie)
 {
 
     return CWM_NON;
 }
 
-static int gyrStepPower(int on, void *cookie)
-{
-
-    return CWM_NON;
-}
-static int gyrSetRate(uint32_t rate, uint64_t latency, void *cookie)
+static int accCalibration(void *handle, void *cookie)
 {
 
     return CWM_NON;
 }
 
-static int gyrCfgData(void *data, void *cookie)
+static int accSelfTest(void *handle, void *cookie)
 {
 
     return CWM_NON;
 }
 
-static int gyrCalibration(void *cookie)
+static int gyrStepPower(void *handle, int on, void *cookie)
+{
+    pCWMHandle_t p = (pCWMHandle_t)handle;
+    pSPI_BMI160_t mem = (pSPI_BMI160_t)p->mem;
+    printf("[%d,%s]%d,%d,%d\n", __LINE__, __FUNCTION__, mem->config.sensor, mem->config.index, on);
+    printf("[%d,%s]%X,%X\n", __LINE__, __FUNCTION__, handle, p->mem);
+    return CWM_NON;
+}
+static int gyrSetRate(void *handle, uint32_t rate, uint64_t latency, void *cookie)
+{
+    pCWMHandle_t p = (pCWMHandle_t)handle;
+    pSPI_BMI160_t mem = (pSPI_BMI160_t)p->mem;
+    printf("[%d,%s]%d,%d,%d,%d\n", __LINE__, __FUNCTION__, mem->config.sensor, mem->config.index, rate, (int)latency);
+    return CWM_NON;
+}
+
+static int gyrCfgData(void *handle, void *data, void *cookie)
 {
 
     return CWM_NON;
 }
 
-static int gyrSelfTest(void *cookie)
+static int gyrCalibration(void *handle, void *cookie)
+{
+
+    return CWM_NON;
+}
+
+static int gyrSelfTest(void *handle, void *cookie)
 {
 
     return CWM_NON;
@@ -142,7 +152,10 @@ static const SensorOps mSensorOps[NUM_OF_SENSOR] =
 
 static int SPI_BMI160_CMD(void *pHandle, uint32_t evtType, void* evtData)
 {
-
+    pCWMHandle_t pH = (pCWMHandle_t)pHandle;
+    pSPI_BMI160_t p = (pSPI_BMI160_t)pH->mem;
+    
+    printf("[%d,%s]%X,%X,%X,%X\n", __LINE__, __FUNCTION__, pH->tid, evtType, evtData, p->config.index);
     return 0;
 }
 
@@ -161,6 +174,13 @@ int drvSPI_BMI160(pCWMHandle_t pHandle, pDriverConfig config, pOsAPI api)
     p->api = api;
     memcpy(&p->config, config, sizeof(DriverConfig));
     
-
+    for (int i = 0; i < NUM_OF_SENSOR; i++) {
+        if(sensorRegister(pHandle, p->config.index, &mSensorInfo[i], &mSensorOps[i]))
+            return CWM_ERROR_NO_INITIAL;
+    }
+    #if 1
+    osSubscribeEvent(0x00010001, pHandle->tid);
+    osSubscribeEvent(0x00010002, pHandle->tid);
+    #endif
     return CWM_NON;
 }

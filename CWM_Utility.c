@@ -10,24 +10,29 @@
 
 #include "CWM_Utility.h"
 
-//TID [31:16]TaskId, [15:0] Task Internal Event.
 static CWMHandle_t tidMem[MAX_TID_INDEX];
 
 static uint32_t tidSearch(void)
 {
-    for(int i=0; i<MAX_TID_INDEX; i++)
+    for(int i=1; i<MAX_TID_INDEX; i++)
         if(tidMem[i].tid == 0)
             return i;
     return -1;
 }
 
+pCWMHandle_t getTidMemory(uint32_t tid)
+{
+    uint32_t currentTid = ((uint32_t)tid>>8)&0x000000FF;
+    return &tidMem[currentTid];
+}
+
 pCWMHandle_t tidAlloc(void)
 {
     uint32_t currentTid = tidSearch();
-    if(currentTid <0 )
+    if(currentTid < 0 )
         return NULL;
     
-    tidMem[currentTid].tid = (currentTid<<16);
+    tidMem[currentTid].tid = (currentTid<<8);
 
     return &tidMem[currentTid];
 }
@@ -36,3 +41,4 @@ void tidFree(pCWMHandle_t pHandle)
 {
     pHandle->tid = 0;
 }
+

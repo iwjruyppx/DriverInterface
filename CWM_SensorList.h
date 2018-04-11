@@ -43,4 +43,21 @@ typedef enum {
     I2C_BMI160,
 } DrvSupportList;
 
+typedef struct {
+    uint8_t sensorType;
+    uint8_t index;
+    uint8_t status;
+    uint8_t reserved;
+    union {
+        struct  {
+            float     fData[6];
+            };
+        struct  {
+            float     cData[3];
+            float     rData[3];
+            };
+    };
+    int64_t timestamp;
+} SensorEVT_t, *pSensorEVT_t;
+
 #endif /* __CWM_SENSORS_LIST_H__ */

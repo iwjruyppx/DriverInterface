@@ -12,13 +12,35 @@
 
 #include "OsApi.h"
 
-static OsAPI apiMem;
+static int Read(pBusTxRxPackage trx)
+{
+    return 0;
+}
 
-void osApiInit(void)
-{   
+static int Write(pBusTxRxPackage trx)
+{
+    return 0;
+}
+
+static void DataCb(uint32_t evtType, void* evtData)
+{
 
 }
 
+static void Error(uint32_t evtType, void* evtData)
+{
+}
+
+static int64_t GetTimeNs(void)
+{
+    return 0;
+}
+
+static void uSleep(uint32_t time)
+{
+}
+
+static OsAPI apiMem ={.Read = Read, .Write = Write, .DataCb = DataCb, .Error = Error, .malloc = malloc, .GetTimeNs = GetTimeNs, .uSleep = uSleep};
 pOsAPI getOsAPI(void)
 {
     return &apiMem;

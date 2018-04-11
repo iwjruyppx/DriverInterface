@@ -10,13 +10,12 @@ typedef struct {
     uint16_t minSamples; /* minimum host fifo size (in # of samples) */
 }SensorInfo;
 
-
 typedef struct {
-    int (*sensorPower)(int on, void *);
-    int (*sensorSetRate)(uint32_t rate, uint64_t latency, void *);
-    int (*sensorCfgData)(void *cfgData, void *);
-    int (*sensorCalibrate)(void *);
-    int (*sensorSelfTest)(void *);
+    int (*sensorPower)(void *handle, int on, void *);
+    int (*sensorSetRate)(void *handle, uint32_t rate, uint64_t latency, void *);
+    int (*sensorCfgData)(void *handle, void *cfgData, void *);
+    int (*sensorCalibrate)(void *handle, void *);
+    int (*sensorSelfTest)(void *handle, void *);
 }SensorOps;
 
 typedef struct {
@@ -30,6 +29,8 @@ typedef struct {
 
 int SensorHalInit(pOsAPI api);
 
-int sensorRegister(const SensorInfo *si, const SensorOps *ops, uint16_t index);
+int sensorRegister(void *handle, uint16_t index, const SensorInfo *si, const SensorOps *ops);
+int sensorEnable(uint32_t sensorId, uint32_t index, uint32_t rate, uint64_t latency, void *evtData);
+int sensorDisable(uint32_t sensorId, uint32_t index);
 
 #endif /* __SEN_HAL_H__ */

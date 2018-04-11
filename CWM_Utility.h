@@ -13,6 +13,7 @@ typedef struct {
 } CWMHandle_t, *pCWMHandle_t;
 
 pCWMHandle_t tidAlloc(void);
+pCWMHandle_t getTidMemory(uint32_t tid);
 void tidFree(pCWMHandle_t pHandle);
 
 #endif /* __CWM_UTILITY_H__ */

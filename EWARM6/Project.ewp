@@ -1043,6 +1043,9 @@
     <group>
       <name>System</name>
       <file>
+        <name>$PROJ_DIR$\..\CWM_StateMachine.c</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\CWM_Utility.c</name>
       </file>
       <file>
@@ -1055,7 +1058,28 @@
         <name>$PROJ_DIR$\..\OsApi.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\Queue.c</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\SenHal.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\SensorManager.c</name>
+      </file>
+    </group>
+    <group>
+      <name>Utility</name>
+      <file>
+        <name>$PROJ_DIR$\..\InsertionSort.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\InterpolationSearch.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\search.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\subscribeEvent.c</name>
       </file>
     </group>
     <file>

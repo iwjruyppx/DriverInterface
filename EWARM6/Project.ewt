@@ -1162,6 +1162,24 @@
     <name>CWM</name>
     <group>
       <name>Algo</name>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoFusion.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoHal.c</name>
+      </file>
+    </group>
+    <group>
+      <name>ALGO_OBJ</name>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoLibrary\cwm_common_utility_float_V00.09.10_20180305_IAR.o</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoLibrary\cwm_fusion_ExMem_V03.17.00_20180402_IAR.o</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoLibrary\cwm_rotvec_transform_V01.00.00_20180402_IAR.o</name>
+      </file>
     </group>
     <group>
       <name>Driver</name>

@@ -17,7 +17,7 @@ typedef struct mgr_t { uint32_t data[CEIL_DIV(MANAGER_NODE_SIZE, sizeof(uint32_t
 typedef mgr_t * mgr_id_t;
 
 /**@brief Application sensor listen handler type. */
-typedef void (*sensor_listen_handler_t)(pSensorEVT_t sensorEVT);
+typedef void (*sensor_listen_handler_t)(void *handle, pSensorEVT_t sensorEVT);
 
 
 /**
@@ -38,7 +38,9 @@ int MGR_Enable(mgr_id_t p_mgr_id,
 
 int MGR_Disable(mgr_id_t p_mgr_id, uint32_t sensorId, uint32_t index);
 
-int MGR_Create(mgr_id_t const * p_mgr_id, sensor_listen_handler_t listen);
+int MGR_Create(mgr_id_t const * p_mgr_id, void *handle, sensor_listen_handler_t listen);
+
+int MGR_SensorUpdate(pSensorEVT_t sensorEVT);
 
 void MGR_init(void);
 

@@ -16,6 +16,7 @@
 #include "OsApi.h"
 #include "DrvHal.h"
 #include "SenHal.h"
+#include "AlgoHal.h"
 
 static void Driver_Init(void)
 {
@@ -53,7 +54,17 @@ static void Driver_Init(void)
 
 static void algoInit(void)
 {
-
+    pCWMHandle_t pHandle;
+    pOsAPI api = getOsAPI();
+    
+    pHandle = tidAlloc();
+    if(pHandle != NULL)
+    {
+        AlgoConfig config;
+        config.sensor = ALGO_FUSION;
+        config.index = 0;
+        AlgoInit(pHandle, &config, api);
+    }
 }
 
 void CWM_INIT(void)

@@ -32,7 +32,8 @@ typedef struct {
 } MSG_Node_t, *pMSG_Node_t;
 
 typedef struct {
-    void (*callBack)(pSensorEVT_t sensorEVT);
+    sensor_listen_handler_t callBack;
+    void *handle;
     pMSG_Node_t next;
 } MGR_Node_t, *pMGR_Node_t;
 
@@ -44,8 +45,16 @@ typedef struct {
 
 static SensorManager_t mgrMEM;
 
-static pMSG_Node_t getMsgNode(void)
+static pMSG_Node_t getMsgNode(pMGR_Node_t p, uint32_t sensorId, uint32_t index)
 {
+    pMSG_Node_t ptr = p->next;
+    while(ptr != NULL)
+    {
+        if((ptr->sensorId == sensorId) && (ptr->index == index))
+            return ptr;
+        ptr = ptr->next;
+    }
+
     for(int i=0;i<MAX_CTRL_MSG_SIZE;i++)
     {
         if(mgrMEM.msgNode[i].sensorId == 0)
@@ -128,6 +137,12 @@ void MGR_Sync(uint32_t sensorId, uint32_t index)
         
 }
 
+int MGR_SensorUpdate(pSensorEVT_t sensorEVT)
+{
+
+    return CWM_NON;
+}
+
 int MGR_Enable(mgr_id_t p_mgr_id, 
                         uint32_t sensorId, 
                         uint32_t index, 
@@ -136,7 +151,7 @@ int MGR_Enable(mgr_id_t p_mgr_id,
                         void *evtData)
 {
     pMGR_Node_t p = (pMGR_Node_t)p_mgr_id;
-    pMSG_Node_t pN = getMsgNode();
+    pMSG_Node_t pN = getMsgNode(p, sensorId, index);
     if(pN == NULL)
         return CWM_ERROR_MEMORY_ALLOC_FAIL;
     
@@ -160,10 +175,11 @@ int MGR_Disable(mgr_id_t p_mgr_id, uint32_t sensorId, uint32_t index)
     return CWM_NON;
 }
 
-int MGR_Create(mgr_id_t const * p_mgr_id, sensor_listen_handler_t listen)
+int MGR_Create(mgr_id_t const * p_mgr_id, void *handle, sensor_listen_handler_t listen)
 {
     mgrMEM.node[mgrMEM.nodeCount] =  (pMGR_Node_t)*p_mgr_id;
     mgrMEM.node[mgrMEM.nodeCount]->callBack = listen;
+    mgrMEM.node[mgrMEM.nodeCount]->handle = handle;
     
     mgrMEM.nodeCount++;
     return CWM_NON;

@@ -360,12 +360,7 @@
           <state>$PROJ_DIR$\..\..\..\Release\SystemConfig\inc</state>
           <state>$PROJ_DIR$\..\..\..\..\..\Source\inc</state>
           <state>$PROJ_DIR$\..\..\..\</state>
-          <state>C:\work\Develop\Source\Manager</state>
-          <state>C:\work\Develop\Source\Common</state>
-          <state>C:\work\Develop\Source\Platform_Dependent</state>
-          <state>C:\work\Develop\Source\Android</state>
-          <state>C:\work\Develop\Source\TimeSync</state>
-          <state>C:\work\Develop\Source\Protocol</state>
+          <state>$PROJ_DIR$\..\AlgoLibrary</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1021,6 +1016,24 @@
     <name>CWM</name>
     <group>
       <name>Algo</name>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoFusion.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoHal.c</name>
+      </file>
+    </group>
+    <group>
+      <name>ALGO_OBJ</name>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoLibrary\cwm_common_utility_float_V00.09.10_20180305_IAR.o</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoLibrary\cwm_fusion_ExMem_V03.17.00_20180402_IAR.o</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\AlgoLibrary\cwm_rotvec_transform_V01.00.00_20180402_IAR.o</name>
+      </file>
     </group>
     <group>
       <name>Driver</name>

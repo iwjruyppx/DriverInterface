@@ -20,10 +20,11 @@
 #include "SenHal.h"
 #include "DrvSPI_BMI160.h"
 
+#include "CWM_StateMachine.h"
+
 typedef struct {
     DriverConfig config;
     pOsAPI api;
-    int TimeScale;
 } SPI_BMI160_t, *pSPI_BMI160_t;
 
 enum SensorIndex {

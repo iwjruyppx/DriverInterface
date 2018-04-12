@@ -17,7 +17,7 @@ static uint32_t tidSearch(void)
     for(int i=1; i<MAX_TID_INDEX; i++)
         if(tidMem[i].tid == 0)
             return i;
-    return -1;
+    return 0;
 }
 
 pCWMHandle_t getTidMemory(uint32_t tid)
@@ -29,7 +29,7 @@ pCWMHandle_t getTidMemory(uint32_t tid)
 pCWMHandle_t tidAlloc(void)
 {
     uint32_t currentTid = tidSearch();
-    if(currentTid < 0 )
+    if(currentTid == 0 )
         return NULL;
     
     tidMem[currentTid].tid = (currentTid<<8);

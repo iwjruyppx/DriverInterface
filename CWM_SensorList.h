@@ -39,6 +39,11 @@
 #define SENS_TYPE_WRIST_TILT      39
 
 typedef enum {
+    ALGO_FUSION 	= 0,
+    ALGO_PEDOMETER,
+} AlgoSupportList;
+
+typedef enum {
     SPI_BMI160 	= 0,
     I2C_BMI160,
 } DrvSupportList;

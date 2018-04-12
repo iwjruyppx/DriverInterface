@@ -16,7 +16,7 @@
 #include "OsApi.h"
 #include "SenHal.h"
 
-#define MAX_SENSOR_TYPE_SUPPORT     10
+#define MAX_SENSOR_TYPE_SUPPORT     20
 
 typedef struct {
     int regCounter;
@@ -34,7 +34,6 @@ static int sensorSearch(uint32_t sensorId, uint32_t index)
     }
     return CWM_ERROR_NOT_FOUND;
 }
-
 
 int sensorEnable(uint32_t sensorId, uint32_t index, uint32_t rate, uint64_t latency, void *evtData)
 {

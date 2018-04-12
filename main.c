@@ -11,7 +11,7 @@
 MGR_DEF(sensor);
 MGR_DEF(sensor1);
 
-void sensorListen(pSensorEVT_t sensorEVT)
+static void sensorListen(void * handle, pSensorEVT_t sensorEVT)
 {
     printf("[%d,%s]%X,%X,%X,%f,%f,%f\n", __LINE__, __FUNCTION__, 
         sensorEVT->sensorType, sensorEVT->index, sensorEVT->status,
@@ -23,14 +23,14 @@ static void init(void)
     MGR_init();
 
     
-    MGR_Create(&sensor1, sensorListen);
+    MGR_Create(&sensor1, NULL, sensorListen);
     
     MGR_Enable(sensor1, SENS_TYPE_ACCEL, 0, 20000000, 2000000000, NULL);
     MGR_Enable(sensor1, SENS_TYPE_GYRO, 0, 30000000, 3000000000, NULL);
     MGR_Enable(sensor1, SENS_TYPE_ACCEL, 1, 40000000, 4000000000, NULL);
     MGR_Enable(sensor1, SENS_TYPE_GYRO, 1, 50000000, 5000000000, NULL);
     
-    MGR_Create(&sensor, sensorListen);
+    MGR_Create(&sensor, NULL, sensorListen);
     
     MGR_Enable(sensor, SENS_TYPE_ACCEL, 0, 10000000, 1000000000, NULL);
     MGR_Enable(sensor, SENS_TYPE_GYRO, 0, 20000000, 2000000000, NULL);

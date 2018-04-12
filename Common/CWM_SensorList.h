@@ -46,6 +46,7 @@ typedef enum {
 typedef enum {
     SPI_BMI160 	= 0,
     I2C_BMI160,
+    I2C_AKM09911,
 } DrvSupportList;
 
 typedef struct {

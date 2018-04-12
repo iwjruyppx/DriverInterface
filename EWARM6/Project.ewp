@@ -360,7 +360,12 @@
           <state>$PROJ_DIR$\..\..\..\Release\SystemConfig\inc</state>
           <state>$PROJ_DIR$\..\..\..\..\..\Source\inc</state>
           <state>$PROJ_DIR$\..\..\..\</state>
+          <state>$PROJ_DIR$\..\Algo</state>
           <state>$PROJ_DIR$\..\AlgoLibrary</state>
+          <state>$PROJ_DIR$\..\Common</state>
+          <state>$PROJ_DIR$\..\System</state>
+          <state>$PROJ_DIR$\..\Driver</state>
+          <state>$PROJ_DIR$\..\Utility</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1017,10 +1022,10 @@
     <group>
       <name>Algo</name>
       <file>
-        <name>$PROJ_DIR$\..\AlgoFusion.c</name>
+        <name>$PROJ_DIR$\..\Algo\AlgoFusion.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\AlgoHal.c</name>
+        <name>$PROJ_DIR$\..\Algo\AlgoHal.c</name>
       </file>
     </group>
     <group>
@@ -1038,67 +1043,55 @@
     <group>
       <name>Driver</name>
       <file>
-        <name>$PROJ_DIR$\..\DrvConfig.h</name>
+        <name>$PROJ_DIR$\..\Driver\DrvHal.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\DrvHal.c</name>
+        <name>$PROJ_DIR$\..\Driver\DrvSPI_BMI160.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\DrvHal.h</name>
-      </file>
-      <file>
-        <name>$PROJ_DIR$\..\DrvSPI_BMI160.c</name>
-      </file>
-      <file>
-        <name>$PROJ_DIR$\..\DrvSPI_BMI160.h</name>
+        <name>$PROJ_DIR$\..\Driver\DrvTemplate.c</name>
       </file>
     </group>
     <group>
       <name>System</name>
       <file>
-        <name>$PROJ_DIR$\..\CWM_StateMachine.c</name>
+        <name>$PROJ_DIR$\..\System\CWM_StateMachine.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\CWM_Utility.c</name>
+        <name>$PROJ_DIR$\..\System\InsertionSort.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\CWM_Utility.h</name>
+        <name>$PROJ_DIR$\..\System\InterpolationSearch.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\OsApi.c</name>
+        <name>$PROJ_DIR$\..\System\OsApi.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\OsApi.h</name>
+        <name>$PROJ_DIR$\..\System\Queue.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\Queue.c</name>
+        <name>$PROJ_DIR$\..\System\search.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\SenHal.c</name>
+        <name>$PROJ_DIR$\..\System\SenHal.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\SensorManager.c</name>
+        <name>$PROJ_DIR$\..\System\SensorManager.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\System\subscribeEvent.c</name>
       </file>
     </group>
     <group>
       <name>Utility</name>
       <file>
-        <name>$PROJ_DIR$\..\InsertionSort.c</name>
-      </file>
-      <file>
-        <name>$PROJ_DIR$\..\InterpolationSearch.c</name>
-      </file>
-      <file>
-        <name>$PROJ_DIR$\..\search.c</name>
-      </file>
-      <file>
-        <name>$PROJ_DIR$\..\subscribeEvent.c</name>
+        <name>$PROJ_DIR$\..\Utility\CWM_Utility.c</name>
       </file>
     </group>
-    <file>
-      <name>$PROJ_DIR$\..\CWM_Init.c</name>
-    </file>
   </group>
+  <file>
+    <name>$PROJ_DIR$\..\CWM_Init.c</name>
+  </file>
   <file>
     <name>$PROJ_DIR$\..\main.c</name>
   </file>

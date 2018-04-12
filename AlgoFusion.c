@@ -57,17 +57,33 @@ typedef struct {
 } FusionSensor_t, *pFusionSensor_t;
 
 typedef struct {
-    SensorEVT_t sensorEVT[3];
+    SensorEVT_t accEVT;
+    SensorEVT_t magEVT;
+    SensorEVT_t gyroEVT;
     float rot_vec[5];
     float rot_mat[9];
     int64_t preTimestamp;
 } RotSensor_t, *pRotSensor_t;
 
 typedef struct {
+    SensorEVT_t accEVT;
+    SensorEVT_t gyroEVT;
+    int64_t preTimestamp;
+} GameSensor_t, *pGameSensor_t;
+
+typedef struct {
+    SensorEVT_t accEVT;
+    SensorEVT_t magEVT;
+    int64_t preTimestamp;
+} GeoSensor_t, *pGeoSensor_t;
+
+typedef struct {
     AlgoConfig config;
     pOsAPI api;
     FusionSensor_t sensor[NUM_OF_FUSION];
     RotSensor_t rotMem;
+    GameSensor_t gameMem;
+    GeoSensor_t geoMem;
     void *hRotMem;
     void *hGameMem;
     void *hGeoMem;
@@ -133,7 +149,8 @@ static int RotGupStepPower(SensorIndex index, void *handle, int on, void *cookie
             MGR_Disable(rotCtrl, SENS_TYPE_MAG, 0);
         }
     }
-        
+    
+    printf("[%d,%s]%d,%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, on, index);
     return CWM_NON;
 }
 
@@ -152,6 +169,7 @@ static int RotGupSetRate(SensorIndex index, void *handle, uint32_t rate, uint64_
     MGR_Enable(rotCtrl, SENS_TYPE_ACCEL, 0, minRate, minLatency, NULL);
     MGR_Enable(rotCtrl, SENS_TYPE_GYRO, 0, minRate, minLatency, NULL);
     MGR_Enable(rotCtrl, SENS_TYPE_MAG, 0, minRate, minLatency, NULL);
+    printf("[%d,%s]%d,%d,%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, rate, (int)latency, index);
     return CWM_NON;
 }
 
@@ -244,6 +262,7 @@ static int geomagStepPower(void *handle, int on, void *cookie)
         MGR_Disable(gameCtrl, SENS_TYPE_MAG, 0);
     }
         
+    printf("[%d,%s]%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, on);
     return CWM_NON;
 }
 
@@ -257,6 +276,7 @@ static int geomagSetRate(void *handle, uint32_t rate, uint64_t latency, void *co
 
     MGR_Enable(geoCtrl, SENS_TYPE_ACCEL, 0, rate, latency, NULL);
     MGR_Enable(geoCtrl, SENS_TYPE_MAG, 0, rate, latency, NULL);
+    printf("[%d,%s]%d,%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, rate, (int)latency);
     return CWM_NON;
 }
 
@@ -287,6 +307,7 @@ static int gameStepPower(void *handle, int on, void *cookie)
         MGR_Disable(gameCtrl, SENS_TYPE_ACCEL, 0);
         MGR_Disable(gameCtrl, SENS_TYPE_GYRO, 0);
     }
+    printf("[%d,%s]%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, on);
     return CWM_NON;
 }
 
@@ -300,6 +321,7 @@ static int gameSetRate(void *handle, uint32_t rate, uint64_t latency, void *cook
 
     MGR_Enable(geoCtrl, SENS_TYPE_ACCEL, 0, rate, latency, NULL);
     MGR_Enable(geoCtrl, SENS_TYPE_GYRO, 0, rate, latency, NULL);
+    printf("[%d,%s]%d,%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, rate, (int)latency);
     return CWM_NON;
 }
 
@@ -338,20 +360,27 @@ static void sensorListenRot(void *handle, pSensorEVT_t sensorEVT)
     pAlgoFusion_t p = (pAlgoFusion_t)(pH->mem);
     int64_t diff;
     SensorEVT_t sensor;
+    
+    if(!checkRotGupPower(p))
+        return;
+    
     switch (sensorEVT->sensorType)
     {
         case SENS_TYPE_ACCEL:
-            memcpy(&p->rotMem.sensorEVT[0], sensorEVT, sizeof(sensorEVT));
+            memcpy(&p->rotMem.accEVT, sensorEVT, sizeof(sensorEVT));
             break;
         case SENS_TYPE_MAG:
-            memcpy(&p->rotMem.sensorEVT[1], sensorEVT, sizeof(sensorEVT));
+            memcpy(&p->rotMem.magEVT, sensorEVT, sizeof(sensorEVT));
             break;
         case SENS_TYPE_GYRO:
-            memcpy(&p->rotMem.sensorEVT[2], sensorEVT, sizeof(sensorEVT));
+            memcpy(&p->rotMem.gyroEVT, sensorEVT, sizeof(sensorEVT));
+            
             if(p->rotMem.preTimestamp == 0)
-                p->rotMem.preTimestamp = p->rotMem.sensorEVT[2].timestamp;
-            diff = (p->rotMem.sensorEVT[2].timestamp - p->rotMem.preTimestamp)/1000ll;
-            if(cwm_fusion(p->hRotMem, p->rotMem.sensorEVT[0].cData, p->rotMem.sensorEVT[2].cData, p->rotMem.sensorEVT[1].cData, p->rotMem.rot_vec, (float) diff)>0)
+                p->rotMem.preTimestamp = sensorEVT->timestamp;
+            diff = (sensorEVT->timestamp - p->rotMem.preTimestamp)/1000ll;
+            p->rotMem.preTimestamp = sensorEVT->timestamp;
+
+            if(cwm_fusion(p->hRotMem, p->rotMem.accEVT.cData, p->rotMem.gyroEVT.cData, p->rotMem.magEVT.cData, p->rotMem.rot_vec, (float) diff)>0)
             {
                 sensor.index = p->config.index;
                 sensor.timestamp = sensorEVT->timestamp;
@@ -359,25 +388,25 @@ static void sensorListenRot(void *handle, pSensorEVT_t sensorEVT)
             
                 if(p->sensor[ORIENTATION].active)
                 {
-                    sensor.sensorType = ORIENTATION;
+                    sensor.sensorType = SENS_TYPE_ORIENTATION;
                     cwm_get_orien(p->rotMem.rot_mat, sensor.fData);
                     MGR_SensorUpdate(&sensor);
                 }
                 if(p->sensor[GRAVITY].active)
                 {
-                    sensor.sensorType = GRAVITY;
+                    sensor.sensorType = SENS_TYPE_GRAVITY;
                     cwm_get_gravity(p->rotMem.rot_mat, sensor.fData);
                     MGR_SensorUpdate(&sensor);
                 }
                 if(p->sensor[LINEAR_ACCEL].active)
                 {
-                    sensor.sensorType = LINEAR_ACCEL;
+                    sensor.sensorType = SENS_TYPE_LINEAR_ACCEL;
                     cwm_get_linear_acc(p->hRotMem, p->rotMem.rot_mat, sensor.fData);
                     MGR_SensorUpdate(&sensor);
                 }
                 if(p->sensor[ROTATION_VECTOR].active)
                 {
-                    sensor.sensorType = ROTATION_VECTOR;
+                    sensor.sensorType = SENS_TYPE_ROTATION_VECTOR;
                     memcpy(sensor.fData, p->rotMem.rot_vec, sizeof(float)*5);
                     MGR_SensorUpdate(&sensor);
                 }
@@ -386,22 +415,77 @@ static void sensorListenRot(void *handle, pSensorEVT_t sensorEVT)
         default:
             return;
     }
-
-    
-int MGR_SensorUpdate(pSensorEVT_t sensorEVT);
 }
 
 static void sensorListenGame(void *handle, pSensorEVT_t sensorEVT)
 {
-    printf("[%d,%s]%X,%X,%X,%f,%f,%f\n", __LINE__, __FUNCTION__, 
-        sensorEVT->sensorType, sensorEVT->index, sensorEVT->status,
-        sensorEVT->fData[0],sensorEVT->fData[1],sensorEVT->fData[2]);
+    pCWMHandle_t pH = handle;
+    pAlgoFusion_t p = (pAlgoFusion_t)(pH->mem);
+    int64_t diff;
+    SensorEVT_t sensor;
+    
+    if(!p->sensor[GAME_ROT_VECTOR].active)
+        return;
+    
+    switch (sensorEVT->sensorType)
+    {
+        case SENS_TYPE_ACCEL:
+            memcpy(&p->gameMem.accEVT, sensorEVT, sizeof(sensorEVT));
+            break;
+        case SENS_TYPE_GYRO:
+            memcpy(&p->gameMem.gyroEVT, sensorEVT, sizeof(sensorEVT));
+            
+            if(p->gameMem.preTimestamp == 0)
+                p->gameMem.preTimestamp = sensorEVT->timestamp;
+            diff = (sensorEVT->timestamp - p->gameMem.preTimestamp)/1000ll;
+            p->gameMem.preTimestamp = sensorEVT->timestamp;
+            
+            if(cwm_game_rot_vec(p->hGameMem, p->gameMem.accEVT.cData, p->gameMem.gyroEVT.cData, sensor.fData, (float) diff)>0)
+            {
+                sensor.sensorType = SENS_TYPE_GAME_ROT_VECTOR;
+                sensor.index = p->config.index;
+                sensor.timestamp = sensorEVT->timestamp;
+                MGR_SensorUpdate(&sensor);
+            }
+            break;
+        default:
+            return;
+    }
 }
 static void sensorListenGeo(void *handle, pSensorEVT_t sensorEVT)
 {
-    printf("[%d,%s]%X,%X,%X,%f,%f,%f\n", __LINE__, __FUNCTION__, 
-        sensorEVT->sensorType, sensorEVT->index, sensorEVT->status,
-        sensorEVT->fData[0],sensorEVT->fData[1],sensorEVT->fData[2]);
+    pCWMHandle_t pH = handle;
+    pAlgoFusion_t p = (pAlgoFusion_t)(pH->mem);
+    int64_t diff;
+    SensorEVT_t sensor;
+    
+    if(!p->sensor[GEO_MAG_ROT_VEC].active)
+        return;
+    
+    switch (sensorEVT->sensorType)
+    {
+        case SENS_TYPE_ACCEL:
+            memcpy(&p->geoMem.accEVT, sensorEVT, sizeof(sensorEVT));
+            
+            if(p->geoMem.preTimestamp == 0)
+                p->geoMem.preTimestamp = sensorEVT->timestamp;
+            diff = (sensorEVT->timestamp - p->geoMem.preTimestamp)/1000ll;
+            p->geoMem.preTimestamp = sensorEVT->timestamp;
+            
+            if(cwm_geo_rot_vec(p->hGeoMem, p->geoMem.accEVT.cData, p->geoMem.magEVT.cData, sensor.fData, (float) diff)>0)
+            {
+                sensor.sensorType = SENS_TYPE_GEO_MAG_ROT_VEC;
+                sensor.index = p->config.index;
+                sensor.timestamp = sensorEVT->timestamp;
+                MGR_SensorUpdate(&sensor);
+            }
+            break;
+        case SENS_TYPE_MAG:
+            memcpy(&p->geoMem.magEVT, sensorEVT, sizeof(sensorEVT));
+            break;
+        default:
+            return;
+    }
 }
 
 static int FusionEVT(void *pHandle, uint32_t evtType, void* evtData)

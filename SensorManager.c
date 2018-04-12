@@ -45,13 +45,22 @@ typedef struct {
 
 static SensorManager_t mgrMEM;
 
-static pMSG_Node_t getMsgNode(pMGR_Node_t p, uint32_t sensorId, uint32_t index)
+static void addMSG(pMGR_Node_t p,
+                        uint32_t sensorId, 
+                        uint32_t index, 
+                        uint32_t rate, 
+                        uint64_t latency)
 {
     pMSG_Node_t ptr = p->next;
+    pMSG_Node_t ptrInsert;
     while(ptr != NULL)
     {
         if((ptr->sensorId == sensorId) && (ptr->index == index))
-            return ptr;
+        {
+            ptr->rate = rate;
+            ptr->latency = latency;
+            return;
+        }
         ptr = ptr->next;
     }
 
@@ -59,23 +68,25 @@ static pMSG_Node_t getMsgNode(pMGR_Node_t p, uint32_t sensorId, uint32_t index)
     {
         if(mgrMEM.msgNode[i].sensorId == 0)
         {
-            return &mgrMEM.msgNode[i];
+            ptrInsert = &mgrMEM.msgNode[i];
+            break;
         }
     }
-    return NULL;
-}
-static void addMSG(pMGR_Node_t p, pMSG_Node_t pN)
-{
-    pMSG_Node_t ptr;
+
+    ptrInsert->sensorId = sensorId;
+    ptrInsert->index = index;
+    ptrInsert->rate = rate;
+    ptrInsert->latency = latency;
+    
     if(p->next == NULL)
     {
-        p->next = pN;
+        p->next = ptrInsert;
         return;
     }
     ptr = p->next;
     while(ptr->next != NULL)
         ptr = ptr->next;
-    ptr->next = pN;
+    ptr->next = ptrInsert;
 }
 
 static void delMSG(pMGR_Node_t p, uint32_t sensorId, uint32_t index)
@@ -138,8 +149,11 @@ void MGR_Sync(uint32_t sensorId, uint32_t index)
 }
 
 int MGR_SensorUpdate(pSensorEVT_t sensorEVT)
-{
-
+{  
+    for(int i=0;i<mgrMEM.nodeCount;i++)
+    {
+        mgrMEM.node[i]->callBack(mgrMEM.node[i]->handle, sensorEVT);
+    }
     return CWM_NON;
 }
 
@@ -151,18 +165,8 @@ int MGR_Enable(mgr_id_t p_mgr_id,
                         void *evtData)
 {
     pMGR_Node_t p = (pMGR_Node_t)p_mgr_id;
-    pMSG_Node_t pN = getMsgNode(p, sensorId, index);
-    if(pN == NULL)
-        return CWM_ERROR_MEMORY_ALLOC_FAIL;
-    
-    pN->sensorId = sensorId;
-    pN->index = index;
-    pN->rate = rate;
-    pN->latency = latency;
-    pN->next = NULL;
-    addMSG(p, pN);
+    addMSG(p, sensorId, index, rate, latency);
     MGR_Sync(sensorId, index);
-    
     return CWM_NON;
 }
 

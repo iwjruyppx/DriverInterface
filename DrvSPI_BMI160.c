@@ -21,17 +21,25 @@
 #include "DrvSPI_BMI160.h"
 
 #include "CWM_StateMachine.h"
-
-typedef struct {
-    DriverConfig config;
-    pOsAPI api;
-} SPI_BMI160_t, *pSPI_BMI160_t;
+#include "sensorManager.h"
 
 enum SensorIndex {
     ACC = 0,
     GYR,
     NUM_OF_SENSOR,
 };
+
+typedef struct {
+    uint64_t latency;
+    uint32_t rate;
+    uint8_t active;
+} Bmi160Sensor_t, *pBmi160Sensor_t;
+
+typedef struct {
+    DriverConfig config;
+    pOsAPI api;
+    Bmi160Sensor_t sensor[NUM_OF_SENSOR];
+} SPI_BMI160_t, *pSPI_BMI160_t;
 
 static uint32_t AccRates[] = {
     SENSOR_HZ(25.0f/8.0f),
@@ -73,17 +81,19 @@ static uint32_t GyrRates[] = {
     
 static int accStepPower(void *handle, int on, void *cookie)
 {
-    pCWMHandle_t p = (pCWMHandle_t)handle;
-    pSPI_BMI160_t mem = (pSPI_BMI160_t)p->mem;
-    printf("[%d,%s]%d,%d\n", __LINE__, __FUNCTION__, mem->config.sensor, mem->config.index);
-    printf("[%d,%s]%X,%X\n", __LINE__, __FUNCTION__, handle, p->mem);
+    pCWMHandle_t pH = (pCWMHandle_t)handle;
+    pSPI_BMI160_t p = (pSPI_BMI160_t)pH->mem;
+    p->sensor[ACC].active = on;
+    printf("[%d,%s]%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, on);
     return CWM_NON;
 }
 static int accSetRate(void *handle, uint32_t rate, uint64_t latency, void *cookie)
 {
-    pCWMHandle_t p = (pCWMHandle_t)handle;
-    pSPI_BMI160_t mem = (pSPI_BMI160_t)p->mem;
-    printf("[%d,%s]%d,%d,%d,%d\n", __LINE__, __FUNCTION__, mem->config.sensor, mem->config.index, rate, (int)latency);
+    pCWMHandle_t pH = (pCWMHandle_t)handle;
+    pSPI_BMI160_t p = (pSPI_BMI160_t)pH->mem;
+    p->sensor[ACC].rate= rate;
+    p->sensor[ACC].latency= latency;
+    printf("[%d,%s]%d,%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, rate, (int)latency);
     return CWM_NON;
 }
 
@@ -107,17 +117,20 @@ static int accSelfTest(void *handle, void *cookie)
 
 static int gyrStepPower(void *handle, int on, void *cookie)
 {
-    pCWMHandle_t p = (pCWMHandle_t)handle;
-    pSPI_BMI160_t mem = (pSPI_BMI160_t)p->mem;
-    printf("[%d,%s]%d,%d,%d\n", __LINE__, __FUNCTION__, mem->config.sensor, mem->config.index, on);
-    printf("[%d,%s]%X,%X\n", __LINE__, __FUNCTION__, handle, p->mem);
+    pCWMHandle_t pH = (pCWMHandle_t)handle;
+    pSPI_BMI160_t p = (pSPI_BMI160_t)pH->mem;
+    p->sensor[GYR].active = on;
+    printf("[%d,%s]%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, on);
+    
     return CWM_NON;
 }
 static int gyrSetRate(void *handle, uint32_t rate, uint64_t latency, void *cookie)
 {
-    pCWMHandle_t p = (pCWMHandle_t)handle;
-    pSPI_BMI160_t mem = (pSPI_BMI160_t)p->mem;
-    printf("[%d,%s]%d,%d,%d,%d\n", __LINE__, __FUNCTION__, mem->config.sensor, mem->config.index, rate, (int)latency);
+    pCWMHandle_t pH = (pCWMHandle_t)handle;
+    pSPI_BMI160_t p = (pSPI_BMI160_t)pH->mem;
+    p->sensor[GYR].rate= rate;
+    p->sensor[GYR].latency= latency;
+    printf("[%d,%s]%d,%d,%d,%d\n", __LINE__, __FUNCTION__, p->config.sensor, p->config.index, rate, (int)latency);
     return CWM_NON;
 }
 
@@ -157,11 +170,33 @@ static int SPI_BMI160_CMD(void *pHandle, uint32_t evtType, void* evtData)
     pCWMHandle_t pH = (pCWMHandle_t)pHandle;
     pSPI_BMI160_t p = (pSPI_BMI160_t)pH->mem;
     uint32_t *time = evtData;
+    
+    SensorEVT_t sensor;
 
     switch(evtType)
     {
         case EVT_TIMER_5MS_TRIGGER:
-            printf("[%d,%s]%s,%d\n", __LINE__, __FUNCTION__, "EVT_TIMER_5MS_TRIGGER", time[0]);
+            
+            if(p->sensor[ACC].active)
+            {
+                sensor.sensorType = SENS_TYPE_ACCEL;
+                sensor.index = p->config.index;
+                sensor.fData[0] = 0.0f;
+                sensor.fData[1] = 0.0f;
+                sensor.fData[2] = 9.81f;
+                sensor.timestamp = ((int64_t)time[0])*1000000;
+                MGR_SensorUpdate(&sensor);
+            }
+            if(p->sensor[GYR].active)
+            {
+                sensor.sensorType = SENS_TYPE_GYRO;
+                sensor.index = p->config.index;
+                sensor.fData[0] = 0.0f;
+                sensor.fData[1] = 0.0f;
+                sensor.fData[2] = 0.1f;
+                sensor.timestamp = ((int64_t)time[0])*1000000;
+                MGR_SensorUpdate(&sensor);
+            }
             break;
         case EVT_TIMER_10MS_TRIGGER:
             printf("[%d,%s]%s,%d\n", __LINE__, __FUNCTION__, "EVT_TIMER_10MS_TRIGGER", time[0]);
@@ -199,12 +234,12 @@ int drvSPI_BMI160(pCWMHandle_t pHandle, pDriverConfig config, pOsAPI api)
         if(sensorRegister(pHandle, p->config.index, &mSensorInfo[i], &mSensorOps[i]))
             return CWM_ERROR_NO_INITIAL;
     }
-    #if 0
     osSubscribeEvent(EVT_TIMER_5MS_TRIGGER, pHandle->tid);
+    #if 0
     osSubscribeEvent(EVT_TIMER_10MS_TRIGGER, pHandle->tid);
     osSubscribeEvent(EVT_TIMER_20MS_TRIGGER, pHandle->tid);
     osSubscribeEvent(EVT_TIMER_100MS_TRIGGER, pHandle->tid);
-    #endif
     osSubscribeEvent(EVT_TIMER_1000MS_TRIGGER, pHandle->tid);
+    #endif
     return CWM_NON;
 }

@@ -9,35 +9,32 @@
 #include "sensorManager.h"
 
 MGR_DEF(sensor);
-MGR_DEF(sensor1);
 
 static void sensorListen(void * handle, pSensorEVT_t sensorEVT)
 {
-    printf("[%d,%s]%X,%X,%X,%f,%f,%f\n", __LINE__, __FUNCTION__, 
-        sensorEVT->sensorType, sensorEVT->index, sensorEVT->status,
-        sensorEVT->fData[0],sensorEVT->fData[1],sensorEVT->fData[2]);
+    printf("[%d,%s]%d,%d,%f,%f,%f,%lld\n", __LINE__, __FUNCTION__
+        , sensorEVT->sensorType, sensorEVT->index
+        ,sensorEVT->fData[0], sensorEVT->fData[1], sensorEVT->fData[2]
+        ,sensorEVT->timestamp);
 }
 
 static void init(void)
 {
     MGR_init();
 
-    
-    MGR_Create(&sensor1, NULL, sensorListen);
-    
-    MGR_Enable(sensor1, SENS_TYPE_ACCEL, 0, 20000000, 2000000000, NULL);
-    MGR_Enable(sensor1, SENS_TYPE_GYRO, 0, 30000000, 3000000000, NULL);
-    MGR_Enable(sensor1, SENS_TYPE_ACCEL, 1, 40000000, 4000000000, NULL);
-    MGR_Enable(sensor1, SENS_TYPE_GYRO, 1, 50000000, 5000000000, NULL);
-    
     MGR_Create(&sensor, NULL, sensorListen);
     
     MGR_Enable(sensor, SENS_TYPE_ACCEL, 0, 10000000, 1000000000, NULL);
     MGR_Enable(sensor, SENS_TYPE_GYRO, 0, 20000000, 2000000000, NULL);
-    MGR_Enable(sensor, SENS_TYPE_ACCEL, 1, 30000000, 3000000000, NULL);
-    MGR_Enable(sensor, SENS_TYPE_GYRO, 1, 40000000, 4000000000, NULL);
     
+    MGR_Enable(sensor, SENS_TYPE_ORIENTATION, 0, 10000000, 1000000000, NULL);
+    MGR_Enable(sensor, SENS_TYPE_GRAVITY, 0, 20000000, 2000000000, NULL);
+    MGR_Enable(sensor, SENS_TYPE_LINEAR_ACCEL, 0, 10000000, 1000000000, NULL);
+    MGR_Enable(sensor, SENS_TYPE_ROTATION_VECTOR, 0, 20000000, 2000000000, NULL);
+    MGR_Enable(sensor, SENS_TYPE_GEO_MAG_ROT_VEC, 0, 10000000, 1000000000, NULL);
+    MGR_Enable(sensor, SENS_TYPE_GAME_ROT_VECTOR, 0, 20000000, 2000000000, NULL);    
 }
+
 static void time(void)
 {
     static uint32_t timestamp = 0;

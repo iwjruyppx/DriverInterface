@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>2507915669</fileChecksum>
+  <fileChecksum>2992039743</fileChecksum>
   <configuration>
     <name>STM32F4</name>
     <outputs>
@@ -48,18 +48,40 @@
       <file>$PROJ_DIR$\STM32F4\Obj\Project.pbd</file>
       <file>$PROJ_DIR$\STM32F4\Exe\Project.out</file>
       <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\STM32F4\List\Measure.lst</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKM_Config.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\ParameterIO.h</file>
+      <file>$PROJ_DIR$\STM32F4\List\ParameterIO.s</file>
       <file>$PROJ_DIR$\..\System\Queue.h</file>
       <file>$PROJ_DIR$\..\SensorManager.h</file>
       <file>$PROJ_DIR$\STM32F4\List\subscribeEvent.lst</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKManualCal.h</file>
       <file>$PROJ_DIR$\STM32F4\List\subscribeEvent.s</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\TestLimit.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKCertification.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKDecomp.h</file>
       <file>$PROJ_DIR$\STM32F4\List\SensorManager.lst</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKHDOE.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKVersion.h</file>
+      <file>$PROJ_DIR$\..\Driver\DrvI2C_AKM09911.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKHFlucCheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\float.h</file>
+      <file>$PROJ_DIR$\STM32F4\List\DrvI2C_AKM09911.lst</file>
+      <file>$PROJ_DIR$\STM32F4\List\Measure.s</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKDirection6D.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKConfigure.h</file>
       <file>$PROJ_DIR$\..\System\search.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKMDeviceF.h</file>
       <file>$PROJ_DIR$\STM32F4\Obj\DrvHal.o</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKMDevice.h</file>
       <file>$PROJ_DIR$\STM32F4\List\SensorManager.s</file>
+      <file>$PROJ_DIR$\STM32F4\List\DrvI2C_AKM09911.s</file>
       <file>$PROJ_DIR$\..\System\subscribeEvent.h</file>
+      <file>$PROJ_DIR$\STM32F4\List\ParameterIO.lst</file>
       <file>$PROJ_DIR$\STM32F4\Obj\DrvHal.pbi</file>
       <file>$PROJ_DIR$\STM32F4\Obj\DrvSPI_BMI160.o</file>
       <file>$PROJ_DIR$\STM32F4\Obj\DrvSPI_BMI160.pbi</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKDOEPlus.h</file>
       <file>$PROJ_DIR$\..\Queue.c</file>
       <file>$PROJ_DIR$\STM32F4\Obj\AlgoFusion.pbi</file>
       <file>$PROJ_DIR$\STM32F4\Obj\AlgoFusion.o</file>
@@ -75,14 +97,20 @@
       <file>$PROJ_DIR$\STM32F4\List\CWM_Utility.lst</file>
       <file>$PROJ_DIR$\..\CWM_Utility.h</file>
       <file>$PROJ_DIR$\..\OsApi.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKCompass.h</file>
+      <file>$PROJ_DIR$\STM32F4\List\TestDevice.s</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AKCommon.h</file>
       <file>$PROJ_DIR$\STM32F4\List\AlgoHal.s</file>
       <file>$PROJ_DIR$\..\Algo\AlgoConfig.h</file>
       <file>$PROJ_DIR$\STM32F4\List\CWM_Utility.s</file>
       <file>$PROJ_DIR$\STM32F4\List\InterpolationSearch.lst</file>
       <file>$PROJ_DIR$\..\System\InsertionSort.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AkmApi.h</file>
       <file>$PROJ_DIR$\STM32F4\List\InterpolationSearch.s</file>
       <file>$PROJ_DIR$\STM32F4\List\OsApi.s</file>
       <file>$PROJ_DIR$\STM32F4\List\AlgoHal.lst</file>
+      <file>$PROJ_DIR$\STM32F4\List\TestDevice.lst</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\CustomerSpec.h</file>
       <file>$PROJ_DIR$\..\DrvSPI_BMI160.c</file>
       <file>$PROJ_DIR$\..\DrvHal.c</file>
       <file>$PROJ_DIR$\..\SenHal.c</file>
@@ -123,6 +151,7 @@
       <file>$PROJ_DIR$\STM32F4\List\DrvSPI_BMI160.s</file>
       <file>$PROJ_DIR$\STM32F4\List\DrvSPI_BMI160.lst</file>
       <file>$PROJ_DIR$\STM32F4\List\CWM_Init.s</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\TestDevice.h</file>
       <file>$PROJ_DIR$\STM32F4\List\OsApi.lst</file>
       <file>$PROJ_DIR$\..\CWM_SensorList.h</file>
       <file>$PROJ_DIR$\..\CWM_Init.h</file>
@@ -139,12 +168,23 @@
       <file>$PROJ_DIR$\STM32F4\List\search.s</file>
       <file>$PROJ_DIR$\STM32F4\List\DrvTemplate.s</file>
       <file>$PROJ_DIR$\STM32F4\List\DrvTemplate.lst</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\Measure.h</file>
       <file>$PROJ_DIR$\STM32F4\List\AlgoFusion.lst</file>
+      <file>$PROJ_DIR$\STM32F4\List\AkmApi.s</file>
       <file>$PROJ_DIR$\..\Driver\DrvHal.h</file>
+      <file>$PROJ_DIR$\STM32F4\List\AkmHAL.lst</file>
       <file>$PROJ_DIR$\..\System\CWM_StateMachine.h</file>
+      <file>$PROJ_DIR$\STM32F4\List\AkmApi.lst</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AkmHAL.h</file>
       <file>$PROJ_DIR$\STM32F4\List\AlgoFusion.s</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\inc\AK09911Register.h</file>
       <file>$PROJ_DIR$\..\CWM_Interface.h</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\Measure.pbi</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\AkmHAL.pbi</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\TestDevice.pbi</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\AkmApi.pbi</file>
       <file>$PROJ_DIR$\..\AlgoFusion.h</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\ParameterIO.pbi</file>
       <file>$PROJ_DIR$\..\CWM_ErrorCode.h</file>
       <file>$PROJ_DIR$\..\subscribeEvent.c</file>
       <file>$PROJ_DIR$\..\CWM_Event.h</file>
@@ -164,24 +204,39 @@
       <file>$PROJ_DIR$\..\System\OsApi.c</file>
       <file>$PROJ_DIR$\..\AlgoLibrary\cwm_rotvec_transform.h</file>
       <file>$PROJ_DIR$\..\AlgoLibrary\cwm_common_utility_float_V00.09.10_20180305_IAR_NoDSPLIB.o</file>
+      <file>$PROJ_DIR$\..\Driver\DrvI2C_AKM09911.c</file>
       <file>$PROJ_DIR$\..\AlgoLibrary\Acc_Gyro_linear_calibrate_v010800_IAR_NoDSPLIB.o</file>
       <file>$PROJ_DIR$\..\AlgoLibrary\cwm_common_utility_float_V00.09.10_20180305_IAR.o</file>
       <file>$PROJ_DIR$\STM32F4\List\CWM_StateMachine.lst</file>
       <file>$PROJ_DIR$\..\Common\CWM_ErrorCode.h</file>
       <file>$PROJ_DIR$\..\Algo\AlgoHal.h</file>
+      <file>$PROJ_DIR$\STM32F4\List\AkmHAL.s</file>
       <file>$PROJ_DIR$\STM32F4\List\InsertionSort.s</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\LIB_API_AKM09911.h</file>
       <file>$PROJ_DIR$\..\System\InterpolationSearch.h</file>
       <file>$PROJ_DIR$\..\System\SensorManager.h</file>
       <file>$PROJ_DIR$\..\Utility\CWM_Utility.h</file>
       <file>$PROJ_DIR$\..\Common\CWM_Interface.h</file>
       <file>$PROJ_DIR$\STM32F4\List\InsertionSort.lst</file>
+      <file>$PROJ_DIR$\..\Driver\DrvI2C_AKM09911_Struct.h</file>
       <file>$PROJ_DIR$\..\Common\CWM_SensorList.h</file>
+      <file>$PROJ_DIR$\STM32F4\List\LIB_API_AKM09911.s</file>
+      <file>$PROJ_DIR$\STM32F4\List\LIB_API_AKM09911.lst</file>
       <file>$PROJ_DIR$\..\System\OsApi.h</file>
       <file>$PROJ_DIR$\..\Common\CWM_Event.h</file>
       <file>$PROJ_DIR$\..\Algo\AlgoFusion.h</file>
       <file>$PROJ_DIR$\..\System\SenHal.h</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\DrvI2C_AKM09911.o</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\TestDevice.o</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\ParameterIO.o</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\LIB_API_AKM09911.o</file>
       <file>$PROJ_DIR$\STM32F4\Obj\DrvTemplate.pbi</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\Measure.o</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\LIB_API_AKM09911.pbi</file>
       <file>$PROJ_DIR$\STM32F4\Obj\DrvTemplate.o</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\DrvI2C_AKM09911.pbi</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\AkmHAL.o</file>
+      <file>$PROJ_DIR$\STM32F4\Obj\AkmApi.o</file>
       <file>$PROJ_DIR$\..\AlgoConfig.h</file>
       <file>$PROJ_DIR$\STM32F4\Obj\InterpolationSearch.__cstat.et</file>
       <file>$PROJ_DIR$\STM32F4\Obj\AlgoFusion.__cstat.et</file>
@@ -196,8 +251,15 @@
       <file>$PROJ_DIR$\..\Driver\DrvHal.c</file>
       <file>$PROJ_DIR$\..\Driver\DrvSPI_BMI160.c</file>
       <file>$PROJ_DIR$\..\AlgoLibrary\cwm_fusion_ExMem.h</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\AKM09911.a</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\Measure.c</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\ParameterIO.c</file>
       <file>$PROJ_DIR$\..\Algo\AlgoHal.c</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\TestDevice.c</file>
       <file>$PROJ_DIR$\..\Algo\AlgoFusion.c</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\AkmHAL.c</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\AkmApi.c</file>
+      <file>$PROJ_DIR$\..\DriverLibrary\AKM09911\LIB_API_AKM09911.c</file>
       <file>$PROJ_DIR$\..\AlgoLibrary\CWM_ALGO_CALLBACK.h</file>
       <file>$PROJ_DIR$\..\AlgoLibrary\cwm_acc_gyro_calibration_V01.00.12_20180118_IAR_NoDSPLIB.o</file>
       <file>$PROJ_DIR$\..\AlgoLibrary\cwm_common_utility_int_V00.03.06_20170414_IAR.o</file>
@@ -233,7 +295,7 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 28 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 171 119 135 169 165</file>
+          <file> 28 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 217 148 167 213 208</file>
         </tool>
       </inputs>
     </file>
@@ -252,7 +314,7 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 11 56 58 159 197 121 195 100 81 48 52 175 92 99 37 82 84 98 85 57 96 19 16 21 17 12</file>
+          <file> 11 245 230 229 78 80 200 259 150 257 128 109 66 220 73 227 120 127 223 37 225 110 222 112 126 113 79 124 221 19 16 21 17 12</file>
         </tool>
       </inputs>
     </file>
@@ -261,21 +323,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 87</file>
+          <file> 115</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 109 108 84</file>
+          <file> 137 136 112</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 185</file>
+          <file> 240</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 142 137 68 144</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 182 172 90 184</file>
         </tool>
       </inputs>
     </file>
@@ -284,21 +346,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 94</file>
+          <file> 122</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 163 168 92</file>
+          <file> 205 211 120</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 179</file>
+          <file> 234</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 59</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 81</file>
         </tool>
       </inputs>
     </file>
@@ -307,21 +369,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 93</file>
+          <file> 121</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 74 72 99</file>
+          <file> 100 97 127</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 177</file>
+          <file> 232</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 88</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 116</file>
         </tool>
       </inputs>
     </file>
@@ -330,11 +392,11 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 53</file>
+          <file> 74</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 114 115 52</file>
+          <file> 142 143 73</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -344,7 +406,7 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 141 139 137 118 67 68 107 62 105 97 43</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 181 179 172 147 89 90 135 84 133 125 47</file>
         </tool>
       </inputs>
     </file>
@@ -353,11 +415,11 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 51</file>
+          <file> 72</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 111 123 48</file>
+          <file> 139 152 66</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -367,7 +429,7 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 139 137 118 67 68 107 106 105</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 179 172 147 89 90 135 134 133</file>
         </tool>
       </inputs>
     </file>
@@ -376,11 +438,11 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 86</file>
+          <file> 114</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 65 120 85</file>
+          <file> 87 149 113</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -390,7 +452,7 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 139 137 118 67 68 62</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 179 172 147 89 90 84</file>
         </tool>
       </inputs>
     </file>
@@ -399,21 +461,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 61</file>
+          <file> 83</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 49 46 57</file>
+          <file> 68 54 79</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 182</file>
+          <file> 237</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 139 137 118 67 68 62 101 88 59 43</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 179 172 147 89 90 84 129 116 81 47</file>
         </tool>
       </inputs>
     </file>
@@ -422,11 +484,11 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 122</file>
+          <file> 151</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 121</file>
+          <file> 144 138 150</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -436,7 +498,7 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 167 169 166 135 170 134 173</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 210 213 209 167 216 165 219 203</file>
         </tool>
       </inputs>
     </file>
@@ -445,21 +507,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 102</file>
+          <file> 130</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 126 160 100</file>
+          <file> 155 201 128</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 184</file>
+          <file> 239</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 141 103 101 97 67 144</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 181 131 129 125 89 184</file>
         </tool>
       </inputs>
     </file>
@@ -468,21 +530,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 91</file>
+          <file> 119</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 130 129 98</file>
+          <file> 159 158 126</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 181</file>
+          <file> 236</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 101 88 59</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 129 116 81</file>
         </tool>
       </inputs>
     </file>
@@ -491,11 +553,11 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 80</file>
+          <file> 108</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 71 66 81</file>
+          <file> 96 88 109</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -505,7 +567,7 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 67</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 89</file>
         </tool>
       </inputs>
     </file>
@@ -514,11 +576,11 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 83</file>
+          <file> 111</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 75 117 82</file>
+          <file> 101 146 110</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -528,7 +590,7 @@
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 137 68</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 172 90</file>
         </tool>
       </inputs>
     </file>
@@ -537,21 +599,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 95</file>
+          <file> 123</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 45 44 96</file>
+          <file> 50 48 124</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 180</file>
+          <file> 235</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 103 101</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 131 129</file>
         </tool>
       </inputs>
     </file>
@@ -560,17 +622,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 95</file>
+          <file> 123</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 45 44 96</file>
+          <file> 50 48 124</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 50 47</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 70 64</file>
         </tool>
       </inputs>
     </file>
@@ -579,17 +641,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 80</file>
+          <file> 108</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 71 66 81</file>
+          <file> 96 88 109</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 166</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 209</file>
         </tool>
       </inputs>
     </file>
@@ -598,17 +660,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 93</file>
+          <file> 121</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 74 72 99</file>
+          <file> 100 97 127</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 164</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 207</file>
         </tool>
       </inputs>
     </file>
@@ -617,17 +679,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 60</file>
+          <file> 82</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 183</file>
+          <file> 238</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 25 137 13 15 89 30 23 34 32 67 7 26 68 9 33 24 139 118 176 41 22 27 31 29 10 35 138</file>
+          <file> 25 172 13 15 117 30 23 34 32 89 7 26 90 9 33 24 179 147 231 41 22 27 31 29 10 35 177</file>
         </tool>
       </inputs>
     </file>
@@ -636,17 +698,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 94</file>
+          <file> 122</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 163 168 92</file>
+          <file> 205 211 120</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 73</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 98</file>
         </tool>
       </inputs>
     </file>
@@ -655,17 +717,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 91</file>
+          <file> 119</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 130 129 98</file>
+          <file> 159 158 126</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 47 164 73</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 64 207 98</file>
         </tool>
       </inputs>
     </file>
@@ -674,17 +736,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 102</file>
+          <file> 130</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 126 160 100</file>
+          <file> 155 201 128</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 171 50 47 135 166 42</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 217 70 64 167 209 46</file>
         </tool>
       </inputs>
     </file>
@@ -693,17 +755,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 87</file>
+          <file> 115</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 109 108 84</file>
+          <file> 137 136 112</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 142 167 170 42</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 182 210 216 46</file>
         </tool>
       </inputs>
     </file>
@@ -712,17 +774,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 61</file>
+          <file> 83</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 49 46 57</file>
+          <file> 68 54 79</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 24 9 143 142 33 10 161 167 169 166 170 173 47 164 73 165</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 24 9 183 182 33 10 202 210 213 209 216 219 64 207 98 208</file>
         </tool>
       </inputs>
     </file>
@@ -731,17 +793,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 86</file>
+          <file> 114</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 65 120 85</file>
+          <file> 87 149 113</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 161 167 169 166 170 173</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 202 210 213 209 216 219</file>
         </tool>
       </inputs>
     </file>
@@ -750,17 +812,36 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 83</file>
+          <file> 111</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 75 117 82</file>
+          <file> 101 146 110</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 167 170</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 210 216</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Driver\DrvI2C_AKM09911.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 228</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 69 60 220</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 217 202 210 213 209 216 165 219 212 57 206 167 208</file>
         </tool>
       </inputs>
     </file>
@@ -769,11 +850,11 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 174</file>
+          <file> 224</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 131 132 175</file>
+          <file> 160 161 227</file>
         </tool>
       </outputs>
     </file>
@@ -782,17 +863,17 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 51</file>
+          <file> 72</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 111 123 48</file>
+          <file> 139 152 66</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 161 167 169 166 170 134 128 127</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 202 210 213 209 216 165 157 156 57</file>
         </tool>
       </inputs>
     </file>
@@ -801,17 +882,55 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 53</file>
+          <file> 74</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 114 115 52</file>
+          <file> 142 143 73</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 171 161 167 169 166 170 134 173 127 135 165</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 217 202 210 213 209 216 165 219 156 167 208</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\Measure.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 173</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 61 42 225</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 212 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 213 209 217 202 210 216 93 91 104 52 63 75 67 65 59 53 55 58 49 56 43 44 162 171 169 62</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\ParameterIO.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 178</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 45 71 222</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 212 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 213 209 217 202 210 216 44 91 104 52 63 75 67 65 59 53 55 58 49 56 43 169</file>
         </tool>
       </inputs>
     </file>
@@ -820,17 +939,36 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 60</file>
+          <file> 82</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 69 76 58</file>
+          <file> 94 102 80</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 161 167 169 166 170 162 70 172</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 202 210 213 209 216 203 95 218</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\TestDevice.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 175</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 92 103 221</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 212 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 213 209 217 202 210 216 93 91 104 52 63 75 67 65 59 53 55 58 49 56 43 145 99 51 169 171</file>
         </tool>
       </inputs>
     </file>
@@ -839,17 +977,74 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 55</file>
+          <file> 77</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 136 133 56</file>
+          <file> 170 163 78</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 171 161 167 169 166 170 162 173 172 189 192 156 165</file>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 217 202 210 213 209 216 203 219 218 244 254 196 208</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\AkmHAL.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 174</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 204 166 229</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 182 23 13 31 22 7 26 29 41 9 212 27 30 34 33 10 15 35 25 24 213 209 217 202 210 216 169</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\AkmApi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 164 168 230</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 212 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 213 209 217 202 210 216 93 99 91 104 52 63 75 67 65 59 53 55 58 49 56 43 169 162 171 44 145 182</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\LIB_API_AKM09911.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 226</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 214 215 223</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27 23 13 31 22 7 26 29 41 30 9 34 33 10 15 35 25 24 212 213 209 217 202 210 216 206 171 91 104 52 63 75 67 65 59 53 55 58 49 56 43 99</file>
         </tool>
       </inputs>
     </file>
@@ -858,24 +1053,20 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 55</file>
+          <file> 77</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 178</file>
+          <file> 233</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 26 189 13 35 139 41 23 15 68 30 34 32 118 62 43 31 29 10 9 33 24 141 137 67 89 138 156 22 7 25 27 192</file>
+          <file> 26 244 13 35 179 41 23 15 90 30 34 32 147 84 47 31 29 10 9 33 24 181 172 89 117 177 196 22 7 25 27 254</file>
         </tool>
       </inputs>
     </file>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\main.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
     <forcedrebuild>
       <name>$PROJ_DIR$\..\DrvSPI_BMI160.c</name>
       <tool>ICCARM</tool>
@@ -883,74 +1074,6 @@
     <forcedrebuild>
       <name>$PROJ_DIR$\..\DrvHal.c</name>
       <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\CWM_Init.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\System\subscribeEvent.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\Utility\CWM_Utility.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\System\InterpolationSearch.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\System\InsertionSort.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\System\search.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\System\CWM_StateMachine.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\System\Queue.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\System\SensorManager.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\System\SenHal.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\System\OsApi.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\Driver\DrvTemplate.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\Driver\DrvHal.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\Driver\DrvSPI_BMI160.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\Algo\AlgoHal.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\..\Algo\AlgoFusion.c</name>
-      <tool>ICCARM</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>[MULTI_TOOL]</name>
-      <tool>ILINK</tool>
     </forcedrebuild>
   </configuration>
 </project>

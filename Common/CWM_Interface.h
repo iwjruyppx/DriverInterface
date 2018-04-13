@@ -3,7 +3,9 @@
 #define __CWM_INTERFACE_H__
 
 typedef enum {
-    TYPE_I2C 	= 0,
+    TYPE_I2C_POLLING 	= 0,
+    TYPE_I2C_INTERRUPT,
+    TYPE_I2C_DMA,
     TYPE_SPI,
 } devType;
 
@@ -15,12 +17,12 @@ typedef struct{
             uint16_t slaveAddr;
             uint16_t address;
             uint16_t reg;
-        }i2cDev;
+        };
         struct{
             uint16_t csPin;
             uint8_t cpol;
             uint8_t cpha;
-        }spiDev;
+        };
     };
     uint8_t *data;
     int len;

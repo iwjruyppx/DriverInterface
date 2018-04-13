@@ -1187,11 +1187,41 @@
         <name>$PROJ_DIR$\..\Driver\DrvHal.c</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\..\Driver\DrvI2C_AKM09911.c</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\..\Driver\DrvSPI_BMI160.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\..\Driver\DrvTemplate.c</name>
       </file>
+    </group>
+    <group>
+      <name>DriverLibrary</name>
+      <group>
+        <name>AKM09911</name>
+        <file>
+          <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\AKM09911.a</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\AkmApi.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\AkmHAL.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\LIB_API_AKM09911.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\Measure.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\ParameterIO.c</name>
+        </file>
+        <file>
+          <name>$PROJ_DIR$\..\DriverLibrary\AKM09911\src\TestDevice.c</name>
+        </file>
+      </group>
     </group>
     <group>
       <name>System</name>

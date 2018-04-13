@@ -6,6 +6,9 @@
 
 #define SENSOR_HZ(_hz)          ((uint32_t)((_hz) * 1024.0f))
 
+#define SENSOR_HZ_TO_MS(_hz)          ((uint32_t)(1000000/(_hz)))
+
+
 typedef struct {
     uint32_t tid;
     int (*handleEvent)(void *pHandle, uint32_t evtType, void* evtData);

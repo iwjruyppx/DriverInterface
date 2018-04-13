@@ -27,7 +27,7 @@ static void Driver_Init(void)
     if(pHandle != NULL)
     {
         DriverConfig config;
-        config.sensor = I2C_BMI160;
+        config.sensor = I2C_AKM09911;
         config.index = 0;
         config.i2cDev.slaveAddr = 0x84;
         DriverInit(pHandle, &config, api);

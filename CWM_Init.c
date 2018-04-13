@@ -29,16 +29,16 @@ static void Driver_Init(void)
         DriverConfig config;
         config.sensor = I2C_AKM09911;
         config.index = 0;
-        config.i2cDev.slaveAddr = 0x84;
+        config.slaveAddr = 0x84;
         DriverInit(pHandle, &config, api);
     }
     pHandle = tidAlloc();
     if(pHandle != NULL)
     {
         DriverConfig config;
-        config.sensor = SPI_BMI160;
+        config.sensor = I2C_BMI160;
         config.index = 0;
-        config.spiDev.csPin = 199;
+        config.csPin = 199;
         DriverInit(pHandle, &config, api);
     }
     pHandle = tidAlloc();
@@ -47,7 +47,7 @@ static void Driver_Init(void)
         DriverConfig config;
         config.sensor = SPI_BMI160;
         config.index = 1;
-        config.spiDev.csPin = 199;
+        config.csPin = 199;
         DriverInit(pHandle, &config, api);
     }
 }

@@ -35,10 +35,10 @@ typedef struct{
     union{
         struct{
             uint16_t slaveAddr;
-        }i2cDev;
+        };
         struct{
             uint16_t csPin;
-        }spiDev;
+        };
     };
 } DriverConfig, *pDriverConfig;
 

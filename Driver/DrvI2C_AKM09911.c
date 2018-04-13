@@ -89,7 +89,7 @@ static int magGetData(pCWMHandle_t pH, int64_t timestamp)
         return CWM_NON;
 
     if(AKM_GET_DATA(pH, &sensor)<0)
-        return CWM_ERROR_I2C;
+        return CWM_ERROR_BUS_RW;
     
     sensor.sensorType = SENS_TYPE_MAG;
     sensor.index = p->config.index;

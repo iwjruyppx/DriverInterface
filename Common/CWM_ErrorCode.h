@@ -48,7 +48,7 @@ typedef enum {
 #define CWM_ERROR_NO_DATA	-9
 #define CWM_ERROR_DATA_BLOCK	-8
 #define CWM_ERROR_SPI			-7
-#define CWM_ERROR_I2C			-6
+#define CWM_ERROR_BUS_RW        -6
 
 #define CWM_ERROR_NO_USEL	 	-5
 #define CWM_ERROR_NO_INITIAL	-4
